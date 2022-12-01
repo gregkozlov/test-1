@@ -23,10 +23,17 @@
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "prepare": "husky install",
+    "pre-commit": "npx tsc && lint-staged"
   },
   "lint-staged": {
-    "*.js": "eslint"
+    "*.{js,ts,tsx}": [
+      "eslint --quiet --cache --fix"
+    ],
+    "*.{json,js,ts,jsx,tsx,html}": [
+      "prettier --write"
+    ]
   },
   "husky": {
     "hooks": {
@@ -58,7 +65,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
-    "husky": "^8.0.2",
+    "husky": "^8.0.0",
     "lint-staged": "^13.0.4",
     "prettier": "^2.8.0",
     "pretty-quick": "^3.1.3"
