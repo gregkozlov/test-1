@@ -3,3 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+.route-block {
+  display: flex;
+}
+.router-checking {
+  display: flex;
+  flex-direction: column;
+}
+.router-checking a {
+  padding: 10px;
+}
