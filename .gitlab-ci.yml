@@ -3,6 +3,8 @@ stages:
 build_image:
  image: docker
  stage: build
+ variables:
+   DOCKER_HOST: tcp://localhost:2375/
  services:
    - docker:19.03-dind
  before_script:
