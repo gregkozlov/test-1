@@ -9,6 +9,6 @@ build_image:
  before_script:
  - docker login -u oauth -p y0_AgAEA7qkTKO0AATuwQAAAADV-oZRJo06kGQFTEa2u6WfAbDTpE9XWD4 cr.yandex
  script:
- - docker build -t cr.yandex/crpfu9m3bepjcshqiu65/test:1
+ - docker build --pull -t cr.yandex/crpfu9m3bepjcshqiu65/test:1
  - docker push cr.yandex/crpfu9m3bepjcshqiu65/test:1
   
