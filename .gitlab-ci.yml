@@ -1,0 +1,6 @@
+build_image:
+ script:
+  docker build . \
+  -t cr.yandex/<crpfu9m3bepjcshqiu65>/test:1
+
+  
