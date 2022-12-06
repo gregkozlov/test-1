@@ -4,7 +4,7 @@ build_image:
  image: docker
  stage: build
  services:
-   - docker:19-dind
+   - docker:19.03-dind
  before_script:
  - docker login -u oauth -p y0_AgAEA7qkTKO0AATuwQAAAADV-oZRJo06kGQFTEa2u6WfAbDTpE9XWD4 cr.yandex
  script:
