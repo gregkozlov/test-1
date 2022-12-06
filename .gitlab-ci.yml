@@ -6,10 +6,9 @@ build_image:
  variables:
    DOCKER_DRIVER: overlay2
    DOCKER_TLS_CERDIR: ""
-   DOCKER_HOST: tcp://thedockerhost:2375/
+   DOCKER_HOST: tcp://localhost:2375/
  services:
-   - name: docker:19.03-dind
-     alias: thedockerhost
+   - docker:19.03-dind
  before_script:
  - docker login -u oauth -p y0_AgAEA7qkTKO0AATuwQAAAADV-oZRJo06kGQFTEa2u6WfAbDTpE9XWD4 cr.yandex
  script:
