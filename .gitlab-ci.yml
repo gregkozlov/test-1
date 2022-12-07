@@ -8,7 +8,7 @@ build_image:
    DOCKER_TLS_CERDIR: ""
    DOCKER_HOST: tcp://localhost:2375/
  services:
-   - docker:18.09-dind
+   - docker-dind
  before_script:
  - docker login -u oauth -p $OAUTH cr.yandex
  script:
