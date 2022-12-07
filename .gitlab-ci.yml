@@ -5,8 +5,6 @@ build_image:
  stage: build
  variables:
    DOCKER_TLS_CERTDIR: "/certs"
- services:
-   - docker:20.10.16-dind
  before_script:
  - docker login -u oauth -p $OAUTH cr.yandex
  script:
