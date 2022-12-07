@@ -10,7 +10,7 @@ build_image:
  services:
    - docker:18.09-dind
  before_script:
- - docker login -u oauth -p y0_AgAEA7qkTKO0AATuwQAAAADV-oZRJo06kGQFTEa2u6WfAbDTpE9XWD4 cr.yandex
+ - docker login -u oauth -p $OAUTH cr.yandex
  script:
  - docker build . -t cr.yandex/$REGISTRYID/test:1 
  - docker push cr.yandex/$REGISTRYID/test:1
