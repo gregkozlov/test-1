@@ -5,7 +5,6 @@ FROM node:10.6-alpine
 # apk add --no-cache libc6-compat
 
 ENV PORT 8080
-EXPOSE 80 # replace this with your application's default port, if necessary
 
 ARG NODE_ENV=production
 ENV NODE_ENV $NODE_ENV
