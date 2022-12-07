@@ -1,7 +1,7 @@
 FROM node:16-slim
 
 WORKDIR /app
-RUN npm install express
+RUN npm ci
 COPY . .
 
 ENV HOST 0.0.0.0
