@@ -7,6 +7,7 @@ build_image:
    DOCKER_DRIVER: overlay2
    DOCKER_TLS_CERDIR: ""
    DOCKER_HOST: tcp://localhost:2375/
+   DOCKER_TLS_CERTDIR: "/certs"
  services:
    - docker:20.10.16-dind
  before_script:
