@@ -1,14 +1,14 @@
 stages:
     - build
 build_image:
- image: docker:latest
+ image: docker:20.10.16
  stage: build
  variables:
    DOCKER_DRIVER: overlay2
    DOCKER_TLS_CERDIR: ""
    DOCKER_HOST: tcp://localhost:2375/
  services:
-   - docker-dind
+   - docker:20.10.16-dind
  before_script:
  - docker login -u oauth -p $OAUTH cr.yandex
  script:
