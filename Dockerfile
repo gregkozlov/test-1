@@ -1,14 +1,12 @@
-FROM node:16-slim as public
+FROM node:16-slim 
 
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
-RUN npm run build
- 
-FROM nginx:1.19-alpine 
+EXPOSE 80
 
-COPY ./nginx/nginx.conf etc/nginx/nginx.conf
-COPY --from=public /app/public usr/share/nginx
+CMD [ "npm", "start" ]
+
 
 
