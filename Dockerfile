@@ -6,7 +6,7 @@ RUN npm ci
 COPY . .
  
 FROM nginx:1.19-alpine 
-COPY ./nginx/nginxl.conf etc/nginx/nginx.conf
+COPY ./nginx/nginx.conf etc/nginx/nginx.conf
 COPY --from=public /app/public usr/share/nginx
 
 CMD [ "npm", "start" ]
