@@ -16,7 +16,7 @@ build_image:
  before_script:
  - docker login -u oauth -p $OAUTH cr.yandex
  script:
- - docker build . -t cr.yandex/$REGISTRYID/ws-ui-fe:latest
+ - docker build . --platform=linux/amd64 -t cr.yandex/$REGISTRYID/ws-ui-fe:latest
  - docker push cr.yandex/$REGISTRYID/ws-ui-fe:latest
  only:
   - develop
