@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
-RUN npm start
+RUN npm run build
  
 FROM nginx:1.19-alpine 
 
