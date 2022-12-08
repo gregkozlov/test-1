@@ -6,6 +6,8 @@ RUN npm ci
 COPY . .
 EXPOSE 3000
 
+СMD ["npm","start"]
+
 
 
 
