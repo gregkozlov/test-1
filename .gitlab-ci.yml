@@ -9,10 +9,12 @@ deploy to s3:
 npm_build:
    image: node:18.12.1
    stage: npm build
+   cache:
+    paths:
+      - build/
    before_script:
      - npm ci
    script:
       - npm run build   
       - ls
       - Get-Location
-      - Copy-Item -Path "C:\GitLab-Runner\builds\g-MKDXB7\0\wscloud\wsfe\build" -Destination "C:\GitLab-Runner\builds\g-MKDXB7\0\wscloud\wsfe"
