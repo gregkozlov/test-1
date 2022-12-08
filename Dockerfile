@@ -6,7 +6,7 @@ RUN npm ci
 COPY . .
 EXPOSE 80
 
-RUN npm start
+RUN npm run build
 
 
 FROM nginx:1.19-alpine 
