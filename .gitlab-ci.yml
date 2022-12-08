@@ -12,6 +12,10 @@ npm_build:
       - npm run build   
       - cd build
       - ls
-      - aws --endpoint-url=https://storage.yandexcloud.net/admin-dev.wscloud.pro \
-       s3 cp --recursive ./ s3://admin-dev.wscloud.pro
+      - aws configure
+      - YCAJEoTenIl63IUD51g2e2_U1
+      - YCMRAH7b5ogCCZubwXIGQHl6xqdT9HYslD_W7FSY
+      - ru-central1
+      - None
+      - aws --endpoint-url=https://storage.yandexcloud.net/stan-eto-na-vremya s3 cp --recursive ./ s3://stan-eto-na-vremya
       
