@@ -3,11 +3,9 @@ stages:
     - deploy
 deploy to s3:
   stage: deploy
+  image: banct/awscli
   script:
-    - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-    - unzip -q awscliv2.zip
-    - ./aws/install aws --endpoint-url=https://storage.yandexcloud.net/admin-dev.wscloud.pro \
-     s3 cp --recursive ./ s3://admin-dev.wscloud.pro
+   - ls
 npm_build:
    image: node:18.12.1
    stage: npm build
