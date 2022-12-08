@@ -1,22 +1,17 @@
 stages:
-    - build
-build_image:
- image: docker:latest
- stage: build
- variables:
-    # Tell docker CLI how to talk to Docker daemon; see
-    # https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#use-docker-in-docker-executor
-    DOCKER_HOST: tcp://thedockerhost:2375/
-    # Use the overlayfs driver for improved performance:
-    DOCKER_DRIVER: overlay2
-    DOCKER_TLS_CERTDIR: ""
- services:
-  - name: docker:dind
-    alias: thedockerhost
- before_script:
- - docker login -u oauth -p $OAUTH cr.yandex
- script:
- - docker build . -t cr.yandex/$REGISTRYID/ws-ui-fe:latest
- - docker push cr.yandex/$REGISTRYID/ws-ui-fe:latest
- only:
-  - develop
+    - npm build
+    - deploy
+deploy to s3:
+  stage: deploy
+  script:
+    - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    - unzip -q awscliv2.zip
+    - ./aws/install aws --endpoint-url=https://storage.yandexcloud.net/admin-dev.wscloud.pro \
+     s3 cp --recursive ./ s3://admin-dev.wscloud.pro
+npm_build:
+   image: node:18.12.1
+   stage: npm build
+   before_script:
+     - npm ci
+   script:
+      - npm run build   
