@@ -1,11 +1,5 @@
 stages:
     - npm build
-    - deploy
-deploy to s3:
-  stage: deploy
-  image: banct/awscli
-  script:
-   - ls
 npm_build:
    image: node:18.12.1
    stage: npm build
@@ -16,7 +10,6 @@ npm_build:
      - npm ci
    script:
       - npm run build   
+      - cd build
       - ls
-      - aws -v
-      - Get-Location
-      - Copy-Item -Path "C:\GitLab-Runner\builds\g-MKDXB7\0\wscloud\wsfe\build" -Destination "C:\GitLab-Runner\builds\g-MKDXB7\0\wscloud\wsfe\build1"
+      
