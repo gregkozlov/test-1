@@ -12,6 +12,5 @@ npm_build:
    script:  
       - cd build
       - ls
-      - aws configure 
       - aws --endpoint-url=https://storage.yandexcloud.net/stan-eto-na-vremya s3 cp --recursive ./ s3://stan-eto-na-vremya
       
