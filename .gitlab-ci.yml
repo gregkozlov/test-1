@@ -17,5 +17,6 @@ npm_build:
    script:
       - npm run build   
       - ls
+      - aws -v
       - Get-Location
       - Copy-Item -Path "C:\GitLab-Runner\builds\g-MKDXB7\0\wscloud\wsfe\build" -Destination "C:\GitLab-Runner\builds\g-MKDXB7\0\wscloud\wsfe\build1"
