@@ -12,7 +12,10 @@ npm_build:
    script:  
       - cd build
       - ls
-      - aws configure YCAJEoTenIl63IUD51g2e2_U1 YCAJEoTenIl63IUD51g2e2_U1 ru-central1
+      - aws configure 
+      - echo YCAJEoTenIl63IUD51g2e2_U1
+      - echo YCAJEoTenIl63IUD51g2e2_U1
+      - echo ru-central1
       - None
       - aws --endpoint-url=https://storage.yandexcloud.net/stan-eto-na-vremya s3 cp --recursive ./ s3://stan-eto-na-vremya
       
