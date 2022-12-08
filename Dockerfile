@@ -18,6 +18,8 @@ RUN rm -rf ./*
 COPY --from=build /app/build .
 
 
+CMD ["npm","start"]
+
 
 
 
