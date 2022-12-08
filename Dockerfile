@@ -4,9 +4,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
-
-
-EXPOSE 3000
-
+ 
+FROM nginx:1.19-alpine 
+COPY ./nginx/nginxl.conf
 
 CMD [ "npm", "start" ]
