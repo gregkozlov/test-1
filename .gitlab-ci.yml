@@ -14,7 +14,7 @@ npm_build:
 AddToStorage:
   stage: AddToStorage
   variables:
-    array: "(Get-Childitem -Path /build )" 
+    array: "(Get-ChildItem $path -Name)" 
   script:  
     - foreach ($item in $array){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://$item}  
   only:
