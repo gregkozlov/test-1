@@ -1,15 +1,17 @@
 stages:
     - npm build
+    - AddToStorage
 npm_build:
    image: node:18.12.1
    stage: npm build
-   variables:
-    array: "(Get-Childitem -Path . )" 
-   before_script:
+   script:
      - npm ci   
-     - npm run build   
-   script:  
+     - npm run build   }
+AddToStorage:
+  stage: AddToStorage
+  variables:
+    array: "(Get-Childitem -Path . )" 
+  script:  
     - cd build
     - ls
-    - foreach ($item in $array){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://}
-
+    - foreach ($item in $array){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://}  
