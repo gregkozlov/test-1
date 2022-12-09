@@ -7,7 +7,6 @@ npm_build:
    script:
      - npm ci   
      - npm run build  
-     - cd build
    variables:
     array: "(Get-Childitem -Path /build )"   
 AddToStorage:
