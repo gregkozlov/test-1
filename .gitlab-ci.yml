@@ -12,4 +12,4 @@ npm_build:
    script:  
       - cd build
       - ls
-      - $array = @(Get-Childitem -Path . -File) foreach ($item in $array){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://}
+      - pwsh ./ AddToStorage.ps1
