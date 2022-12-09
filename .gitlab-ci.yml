@@ -7,6 +7,7 @@ npm_build:
    before_script:
      - npm ci  
    script: 
+     - npm start lint -- --fix
      - npm run build  
    variables:
     array: "(Get-Childitem -Path /build )" 
