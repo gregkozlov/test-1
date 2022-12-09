@@ -3,15 +3,13 @@ stages:
 npm_build:
    image: node:18.12.1
    stage: npm build
-   cache:
-    paths:
-      - build/
+   variables:
+    $array: "@(Get-Childitem -Path .  )" 
    before_script:
      - npm ci   
      - npm run build   
    script:  
     - cd build
     - ls
-    - >
-      $array = @(Get-Childitem -Path . -File) 
-      foreach ($item in $array){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://}
+    - foreach ($item in $array){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://}
+
