@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +7,15 @@
 }
 .route-block {
   display: flex;
+  height: calc(100vh - 60px);
+}
+.route-screens{
+  flex: 1;
+  background-color: #eaeaea;
 }
 .router-checking {
   display: flex;
   flex-direction: column;
 }
-.router-checking a {
-  padding: 10px;
-}
+
+

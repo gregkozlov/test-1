@@ -1,8 +1,9 @@
 import "./style/main.scss";
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
-import { LINKS } from "./constants/routes";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { LINKS_BOTTOM, LINKS_TOP } from "./constants/routes";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { DashboardNavigation } from "./shared/";
 
 const App: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -22,17 +23,12 @@ const App: React.FC = () => {
           <div>{t("text")}</div>
         </div>
         <div className="route-block">
-          <p>Route check</p>
           <div className="router-checking">
-            {LINKS.map((el) => (
-              <Link to={el.url} key={el.title}>
-                {el.title}
-              </Link>
-            ))}
+            <DashboardNavigation />
           </div>
           <div className="route-screens">
             <Routes>
-              {LINKS.map((el) => (
+              {[...LINKS_TOP, ...LINKS_BOTTOM].map((el) => (
                 <Route key={el.title} path={el.url} element={<el.component />} />
               ))}
             </Routes>

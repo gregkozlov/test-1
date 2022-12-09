@@ -1,0 +1,11 @@
+export { ReactComponent as Logs } from "./errorLogs.svg";
+export { ReactComponent as Clients } from "../../shared/images/person.svg";
+export { ReactComponent as Computer } from "../../shared/images/computer.svg";
+export { ReactComponent as Dashboard } from "../../shared/images/dashboard.svg";
+export { ReactComponent as Store } from "../../shared/images/store.svg";
+export { ReactComponent as Percent } from "../../shared/images/percent.svg";
+export { ReactComponent as Loyalty } from "../../shared/images/loyalty.svg";
+export { ReactComponent as People } from "../../shared/images/people.svg";
+export { ReactComponent as Book } from "../../shared/images/book.svg";
+export { ReactComponent as Cloud } from "../../shared/images/cloud.svg";
+export { ReactComponent as Settings } from "../../shared/images/settings.svg";
