@@ -10,6 +10,10 @@ npm_build:
      - npm ci   
      - npm run build   
    script:  
-      - cd build
-      - ls
-      - pwsh ./ AddToStorage.ps1
+    - cd build
+    - ls
+    - >
+      setlocal enabledelayedexpansion
+      $array = @(Get-Childitem -Path . -File) 
+      foreach ($item in $array){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://}
+      endlocal
