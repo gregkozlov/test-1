@@ -7,10 +7,9 @@ npm_build:
     paths:
       - build/
    before_script:
-     - npm ci
+     - npm ci   
      - npm run build   
    script:  
       - cd build
       - ls
-      - aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp --recursive ./ s3://ws-admin-fe-ci
-      
+      - $array = @(Get-Childitem -Path . -File) foreach ($item in $array){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://}
