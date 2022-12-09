@@ -6,15 +6,16 @@ npm_build:
    stage: npm build
    before_script:
      - npm ci  
+     - npm run lint -- --fix
    script: 
      - npm run build
-   variables:
-    array: "(Get-Childitem -Path /public )" 
    only:
    - features-New_CI  
 AddToStorage:
   stage: AddToStorage
+  variables:
+    array: "(Get-Childitem -Path /build )" 
   script:  
-    - foreach ($item in $array){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://}  
+    - foreach ($item in $array){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://$item}  
   only:
   - features-New_CI
