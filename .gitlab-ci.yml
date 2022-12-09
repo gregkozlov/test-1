@@ -4,8 +4,9 @@ stages:
 npm_build:
    image: node:18.12.1
    stage: npm build
-   script:
-     - npm ci   
+   before_script:
+     - npm ci  
+   script: 
      - npm run build  
    variables:
     array: "(Get-Childitem -Path /build )"   
