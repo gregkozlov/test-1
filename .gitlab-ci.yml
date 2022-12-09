@@ -7,7 +7,7 @@ npm_build:
    before_script:
      - npm ci  
    script: 
-     - npm start lint -- --fix
+     - npm run build
    variables:
     array: "(Get-Childitem -Path /public )" 
    only:
@@ -15,8 +15,6 @@ npm_build:
 AddToStorage:
   stage: AddToStorage
   script:  
-    - cd build
-    - ls
     - foreach ($item in $array){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://}  
   only:
   - features-New_CI
