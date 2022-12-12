@@ -10,10 +10,10 @@ npm_build:
      - npm run build
    only:
    - features-New_CI  
+   variables:
+    array: "(Get-ChildItem cd . -Name)" 
 AddToStorage:
   stage: AddToStorage
-  variables:
-    array: "(Get-ChildItem $path -Name)" 
   script:  
     - foreach ($item in $array){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://$item}  
   only:
