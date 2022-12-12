@@ -10,7 +10,7 @@ npm_build:
      - cd build
      - ls
      - foreach ($item in Get-Childitem -Path . ){ aws --endpoint-url=https://storage.yandexcloud.net/ s3 cp $item s3://ws-admin-fe-ci/}  
-     - aws --endpoint-url=https://storage.yandexcloud.net/ s3 cp --recursive . / s3://ws-admin-fe-ci/
+     - aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp --recursive ./ s3://ws-admin-fe-ci
    only:
    - features-New_CI  
 
