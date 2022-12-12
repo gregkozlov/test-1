@@ -9,7 +9,7 @@ npm_build:
    script: 
      - cd build
      - ls 
-     - aws --endpoint-url=https://storage.yandexcloud.net/ s3 cp --recursive ./ s3://ws-admin-fe-ci/
+     - aws --endpoint-url=https://storage.yandexcloud.net/ s3 cp --recursive ./ s3://admin-dev.wscloud.pro/
    only:
    - features-New_CI  
 
