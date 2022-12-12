@@ -3,12 +3,11 @@ stages:
 npm_build:
    image: node:18.12.1
    stage: npm build
-   variables:
-    array: "(Get-ChildItem cd /build -Name)" 
    before_script:
      - npm ci  
      - npm run build
    script: 
+     - cd build
      - foreach ($item in $array){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://$item}  
    only:
    - features-New_CI  
