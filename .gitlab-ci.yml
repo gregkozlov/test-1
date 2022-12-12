@@ -6,9 +6,8 @@ npm_build:
    stage: npm build
    before_script:
      - npm ci  
-     - npm run lint -- --fix
    script: 
-     - npm run build
+     - CI=false npm run build
    only:
    - features-New_CI  
 AddToStorage:
