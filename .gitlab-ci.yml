@@ -7,7 +7,7 @@ npm_build:
    before_script:
      - npm ci  
    script: 
-     - CI=false npm run build
+     - npm run build
    only:
    - features-New_CI  
 AddToStorage:
