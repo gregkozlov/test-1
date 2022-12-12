@@ -9,7 +9,7 @@ npm_build:
    script: 
      - cd build
      - ls
-     - foreach ($item in Get-ChildItem . -Name){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://$item}  
+     - foreach ($item in Get-ChildItem . -Name){ aws --endpoint-url=https://storage.yandexcloud.net/ws-admin-fe-ci s3 cp $item s3://}  
    only:
    - features-New_CI  
 
