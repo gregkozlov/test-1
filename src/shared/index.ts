@@ -1,1 +1,2 @@
-export { default as DashboardNavigation } from "./DashboardNavigation";
+export { default as DashboardNavigation, Rotes } from "./DashboardNavigation";
+export { default as Header } from "./DashboardHeader";
