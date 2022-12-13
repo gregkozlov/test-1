@@ -5,15 +5,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-.route-block {
+.route_block {
   display: flex;
   height: calc(100vh - 60px);
 }
-.route-screens{
+.route_screens{
   flex: 1;
   background-color: #eaeaea;
 }
-.router-checking {
+.router_checking {
   display: flex;
   flex-direction: column;
 }
