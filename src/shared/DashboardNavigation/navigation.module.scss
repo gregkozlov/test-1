@@ -1,0 +1,13 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  height: 100vh;
+  justify-content: space-between;
+  .navbar_section {
+    &__hr {
+      margin-bottom: 30px;
+      color: #a0a0a9;
+    }
+  }
+}
