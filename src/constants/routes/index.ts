@@ -1,3 +1,4 @@
+import { SVGProps } from "react";
 import {
   ComputerListScreen,
   ComputersScreen,
@@ -30,7 +31,19 @@ import {
   Settings
 } from "../../shared/images";
 
-export const LINKS_TOP = [
+export type linkItemType = {
+  url: string;
+  title: string;
+  component: React.FC;
+  icon?: React.FC<
+    SVGProps<SVGSVGElement> & {
+      title?: string | undefined;
+    }
+  >;
+  dropdown?: Omit<linkItemType, "icon">[];
+};
+
+export const LINKS_TOP: linkItemType[] = [
   {
     url: "/",
     title: "Dashboard",
@@ -88,7 +101,7 @@ export const LINKS_TOP = [
   }
 ];
 
-export const LINKS_BOTTOM = [
+export const LINKS_BOTTOM: linkItemType[] = [
   {
     url: "/taxes",
     title: "Taxes",
