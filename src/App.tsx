@@ -1,9 +1,8 @@
-import "./style/main.scss";
+import styles from "./style/main.module.scss";
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
-import { LINKS_BOTTOM, LINKS_TOP } from "./constants/routes";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { DashboardNavigation } from "./shared/";
+import { BrowserRouter } from "react-router-dom";
+import { DashboardNavigation, Header, Rotes } from "./shared/";
 
 const App: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -22,16 +21,12 @@ const App: React.FC = () => {
           <button onClick={() => changeLanguage("ru")}>RU</button>
           <div>{t("text")}</div>
         </div>
-        <div className="route-block">
-          <div className="router-checking">
+        <div className={styles.route_block}>
+          <div className={styles.route_checker}>
             <DashboardNavigation />
           </div>
-          <div className="route-screens">
-            <Routes>
-              {[...LINKS_TOP, ...LINKS_BOTTOM].map((el) => (
-                <Route key={el.title} path={el.url} element={<el.component />} />
-              ))}
-            </Routes>
+          <div className={styles.route_screens}>
+            <Rotes />
           </div>
         </div>
       </BrowserRouter>
