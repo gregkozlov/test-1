@@ -2,7 +2,7 @@ import styles from "./style/main.module.scss";
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { DashboardNavigation, Header, Rotes } from "./shared/";
+import { DashboardNavigation, Rotes } from "./shared/";
 
 const App: React.FC = () => {
   const { t, i18n } = useTranslation();
