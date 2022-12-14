@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, Routes, Route } from "react-router-dom";
 
-import { LINKS_BOTTOM, LINKS_TOP, linkItemType } from "../../constants/routes";
+import { LINKS_BOTTOM, LINKS_TOP } from "../../constants/routes";
+import { linkItemType } from "../../constants/routes/types";
 import NavigationItem from "./components/NavigationItem";
 import styles from "./navigation.module.scss";
 

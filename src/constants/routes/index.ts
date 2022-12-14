@@ -31,17 +31,7 @@ import {
   Settings
 } from "../../shared/images";
 
-export type linkItemType = {
-  url: string;
-  title: string;
-  component: React.FC;
-  icon?: React.FC<
-    SVGProps<SVGSVGElement> & {
-      title?: string | undefined;
-    }
-  >;
-  dropdown?: Omit<linkItemType, "icon">[];
-};
+import { linkItemType } from "./types";
 
 export const LINKS_TOP: linkItemType[] = [
   {

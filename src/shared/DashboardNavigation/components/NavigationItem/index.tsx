@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { ReactComponent as ChevronDown } from "../../../../shared/images/dropdown.svg";
-import { linkItemType } from "../../../../constants/routes";
+import { linkItemType } from "../../../../constants/routes/types";
 
 import styles from "./styles.module.scss";
 
