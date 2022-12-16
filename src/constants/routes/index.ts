@@ -1,3 +1,4 @@
+import { SVGProps } from "react";
 import {
   ComputerListScreen,
   ComputersScreen,
@@ -30,7 +31,9 @@ import {
   Settings
 } from "../../shared/images";
 
-export const LINKS_TOP = [
+import { linkItemType } from "./types";
+
+export const LINKS_TOP: linkItemType[] = [
   {
     url: "/",
     title: "Dashboard",
@@ -88,7 +91,7 @@ export const LINKS_TOP = [
   }
 ];
 
-export const LINKS_BOTTOM = [
+export const LINKS_BOTTOM: linkItemType[] = [
   {
     url: "/taxes",
     title: "Taxes",

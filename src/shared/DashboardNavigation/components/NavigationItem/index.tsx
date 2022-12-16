@@ -1,23 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { ReactComponent as ChevronDown } from "../../../../shared/images/dropdown.svg";
+import { linkItemType } from "../../../../constants/routes/types";
 
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 
 type NavigationItemType = {
   activeLink: string;
   setActiveLink: React.Dispatch<React.SetStateAction<string>>;
-  link: {
-    url: string;
-    title: string;
-    component: React.FC;
-    icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
-    dropdown?: {
-      url: string;
-      title: string;
-      component: React.FC;
-    }[];
-  };
+  link: linkItemType;
 };
 
 const NavigationItem: React.FC<NavigationItemType> = ({ link, setActiveLink, activeLink }) => {
@@ -32,18 +23,18 @@ const NavigationItem: React.FC<NavigationItemType> = ({ link, setActiveLink, act
 
   if (link.dropdown) {
     return (
-      <div className={styles.dropdown}>
-        <div className={styles.linkContainer} onClick={handleDropdownToggle}>
+      <>
+        <div className={styles.link_container} onClick={handleDropdownToggle}>
           <NavLink
-            onClick={(e) => {
+            onClick={() => {
               setActiveLink(link.title);
             }}
             to={link.url}
             className={() => (isDropdownActive ? `${styles.active} ${styles.link}` : styles.link)}
             key={link.title}>
-            {link?.icon && <link.icon className={`${styles.icon}`} />}
+            {link?.icon && <link.icon className={`${styles.link__icon}`} />}
             {link.title}
-            <ChevronDown className={styles.chevronDown} />
+            <ChevronDown className={styles.link__chevron_down} />
           </NavLink>
         </div>
         {isDropdownActive &&
@@ -52,29 +43,29 @@ const NavigationItem: React.FC<NavigationItemType> = ({ link, setActiveLink, act
             <NavLink
               to={link.url}
               className={({ isActive }) => {
-                return isActive ? `${styles.sublink} ${styles.active}` : styles.sublink;
+                return isActive ? `${styles.sub_link} ${styles.active}` : styles.sub_link;
               }}
               key={link.title}>
               {link.title}
             </NavLink>
           ))}
-      </div>
+      </>
     );
   }
 
   return (
-    <div className={styles.linkContainer}>
+    <div className={styles.link_container}>
       <NavLink
         to={link.url}
         className={({ isActive }) => {
           return isActive ? `${styles.active} ${styles.link}` : styles.link;
         }}
-        onClick={(e) => {
+        onClick={() => {
           setActiveLink(link.title);
         }}
         key={link.title}>
         {link.title}
-        {link?.icon && <link.icon className={styles.icon} />}
+        {link?.icon && <link.icon className={styles.link__icon} />}
       </NavLink>
     </div>
   );
