@@ -1,0 +1,19 @@
+@use "sass:math";
+
+.grid_container {
+  display: flex;
+  padding: 0 15px;
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+}
+
+@for $i from 1 through 12 {
+  .col__#{$i} {
+    flex-basis: $i * 100% / 12;
+  }
+}
