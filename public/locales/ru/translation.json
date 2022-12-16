@@ -1,3 +1,26 @@
 {
-  "text": "какой то текст"
+  "login": {
+    "authorization": "Авторизация"
+  },
+  "placeholders": {
+    "login": "Введите логин",
+    "password": "Введите пароль"
+  },
+  "labels": {
+    "login": "Логин",
+    "password": "Пароль"
+  },
+  "buttons": {
+    "login": "Войти"
+  },
+  "formikErrors": {
+    "emptyLogin": "Введите логин",
+    "shortLogin": "Слишком короткий логин",
+    "longLogin": "Слишком длинный логин",
+    "emptyPassword": "Введите пароль",
+    "shortPassword": "Слишком короткий пароль",
+    "longPassword": "Слишком длинный пароль",
+    "invalidPhone": "Неверный формат номера",
+    "invalidLogin": "Использование символов запрещено"
+  }
 }

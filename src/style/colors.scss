@@ -1,0 +1,65 @@
+// TODO: add light and dark colors, add dependencies in other maps
+
+$light_colors: ();
+
+$dark_colors: ();
+
+// BACKGROUND
+
+$background_colors_light_theme: (
+  "primary": #ffffff,
+  "secondary": #f5f5ff
+);
+
+$background_colors_dark_theme: (
+  "primary": #181818,
+  "secondary": #2c2c2c
+);
+
+// BUTTON
+
+$button_colors_light_theme: (
+  "primary": #4b47ff,
+  "primary_hover": #312fa8
+);
+
+$button_colors_dark_theme: (
+  "primary": #4b47ff,
+  "primary_hover": #312fa8
+);
+
+// FONT
+
+$font_colors_light_theme: (
+  "primary": #14142a,
+  "button_primary": #ffffff
+);
+
+$font_colors_dark_theme: (
+  "primary": #ffffff,
+  "button_primary": #ffffff
+);
+
+// INPUT
+
+$input_colors_light_theme: (
+  // "primary": #ffffff,
+  "primary": #f5f5ff,
+  "border": #93939d,
+  "active": map-get($button_colors_light_theme, "primary")
+);
+
+$input_colors_dark_theme: (
+  // "primary": #ffffff,
+  "primary": #2c2c2c,
+  "border": #93939d,
+  "active": map-get($button_colors_dark_theme, "primary")
+);
+
+// ACTION
+
+$action_colors: (
+  "success": #039300,
+  "error": #f5847d,
+  "warning": #975b00
+);
