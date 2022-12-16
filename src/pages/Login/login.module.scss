@@ -1,0 +1,31 @@
+@import "/src/style/colors.scss";
+
+.login {
+  min-width: 100vw;
+  min-height: 100vh;
+
+  &.light {
+    background: linear-gradient(180deg, map-get($background_colors_light_theme, "secondary") 0%, #4b47ff 215.6%);
+  }
+
+  &.dark {
+    background: linear-gradient(180deg, map-get($background_colors_dark_theme, "secondary") 0%, #4b47ff 215.6%);
+  }
+
+  &__background_image {
+    background: url(./images/login_screen_bg.svg) no-repeat center center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.temporary {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
