@@ -1,8 +1,9 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import counterReducer from "../slice";
+import { userSliceReducer, themeSliceReducer } from "../appSlices";
 
 const rootReducer = combineReducers({
-  counterReducer
+  userSliceReducer,
+  themeSliceReducer
 });
 
 export const store = configureStore({

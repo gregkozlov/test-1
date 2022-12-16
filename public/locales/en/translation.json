@@ -1,3 +1,26 @@
 {
-  "text": "some text"
+  "login": {
+    "authorization": "Sign In"
+  },
+  "placeholders": {
+    "login": "Enter your Login",
+    "password": "Enter your Password"
+  },
+  "labels": {
+    "login": "Login",
+    "password": "Password"
+  },
+  "buttons": {
+    "login": "Login"
+  },
+  "formikErrors": {
+    "emptyLogin": "Login is required",
+    "shortLogin": "Login is too short ",
+    "longLogin": "Login is too long",
+    "emptyPassword": "Password is required",
+    "shortPassword": "Password is too short",
+    "longPassword": "Password is too long",
+    "invalidPhone": "Invalid phone number",
+    "invalidLogin": "Symbols are not allowed"
+  }
 }

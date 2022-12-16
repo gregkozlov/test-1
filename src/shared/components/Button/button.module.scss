@@ -1,0 +1,122 @@
+@import "/src/style/colors.scss";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0;
+
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+
+  &.primary {
+    &.light {
+      background-color: map-get($button_colors_light_theme, "primary");
+      color: map-get($font_colors_light_theme, "button_primary");
+      border-color: map-get($button_colors_light_theme, "primary");
+
+      &:hover {
+        background-color: map-get($button_colors_light_theme, "primary_hover");
+        border-color: map-get($button_colors_light_theme, "primary_hover");
+      }
+    }
+
+    &.dark {
+      background-color: map-get($button_colors_dark_theme, "primary");
+      color: map-get($font_colors_dark_theme, "button_primary");
+      border-color: map-get($button_colors_dark_theme, "primary");
+
+      &:hover {
+        background-color: map-get($button_colors_dark_theme, "primary_hover");
+        border-color: map-get($button_colors_dark_theme, "primary_hover");
+      }
+    }
+  }
+
+  &.secondary {
+    background-color: transparent;
+
+    &.light {
+      color: map-get($font_colors_light_theme, "primary");
+      border-color: map-get($font_colors_light_theme, "primary");
+
+      &:hover {
+        color: map-get($button_colors_light_theme, "primary");
+        border-color: map-get($button_colors_light_theme, "primary");
+      }
+    }
+
+    &.dark {
+      color: map-get($font_colors_dark_theme, "primary");
+      border-color: map-get($font_colors_dark_theme, "primary");
+
+      &:hover {
+        color: map-get($button_colors_dark_theme, "primary");
+        border-color: map-get($button_colors_dark_theme, "primary");
+      }
+    }
+  }
+
+  &.large {
+    height: 90px;
+    border-radius: 10px;
+
+    padding: 0 40px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  &.medium {
+    // height: 65px;
+    // border-radius: 10px;
+
+    // padding: 0 30px;
+
+    // font-style: normal;
+    // font-weight: 400;
+    // font-size: 24px;
+    // line-height: 26px;
+    height: 40px;
+    border-radius: 10px;
+
+    padding: 0 10px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &.small {
+    height: 40px;
+    border-radius: 10px;
+
+    padding: 0 10px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &.border {
+    border: 2px solid;
+    width: 100%;
+  }
+}
+
+/*
+  .light {
+    //props
+  }
+
+  .dark {
+    //props
+  }
+
+  'light' | 'dark'
+*/
