@@ -1,7 +1,7 @@
 import styles from "./style/main.module.scss";
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
-import { DashboardNavigation, Rotes } from "./shared/";
+import { DashboardNavigation, RoutesContainer } from "./shared/";
 import { LINKS_BOTTOM, LINKS_TOP } from "./constants/routes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -33,11 +33,7 @@ const App: React.FC = () => {
               <DashboardNavigation />
             </div>
             <div className={styles.route_screens}>
-              <Routes>
-                {[...LINKS_TOP, ...LINKS_BOTTOM].map((el) => (
-                  <Route key={el.title} path={el.url} element={<el.component />} />
-                ))}
-              </Routes>
+              <RoutesContainer />
             </div>
           </div>
         </BrowserRouter>

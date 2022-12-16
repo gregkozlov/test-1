@@ -46,7 +46,7 @@ const Navigation: React.FC = () => {
   );
 };
 
-const Rotes: React.FC = () => {
+const RoutesContainer: React.FC = () => {
   const normalizeRoutes = (links: linkItemType[]) => {
     return links
       .map((route) => {
@@ -71,4 +71,4 @@ const Rotes: React.FC = () => {
   );
 };
 
-export { Navigation as default, Rotes };
+export { Navigation as default, RoutesContainer };
