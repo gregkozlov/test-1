@@ -1,7 +1,9 @@
 stages:
     - npm build
 npm_build:
-   image: node:18.12.1
+   image:
+     - name: node:18.12.1
+     - entrypoint: [""] 
    stage: npm build
    before_script:
      - npm ci  
