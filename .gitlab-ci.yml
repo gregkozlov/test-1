@@ -4,7 +4,8 @@ npm_build:
    image:
      - name: amazon/aws-cli
      - entrypoint: [""] 
-   stage: npm build
+   stage: 
+     - npm build
    before_script:
      - npm ci  
      - npm run build
