@@ -12,4 +12,6 @@ npm_build:
     - aws --endpoint-url=https://storage.yandexcloud.net/ s3 cp --recursive ./ s3://admin-dev.wscloud.pro/
    only:
    - features-New_CI 
+   tags:
+     powershell
 
