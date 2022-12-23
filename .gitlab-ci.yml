@@ -13,5 +13,5 @@ npm_build:
    only:
    - features-New_CI 
    tags:
-     powershell
+    - powershell
 
