@@ -1,7 +1,7 @@
 stages:
   - npm build
 npm_build:
-   image: amazon/aws-cli
+   image: node:18.12.1
    stage: npm build
    before_script:
     - npm ci  
@@ -12,5 +12,4 @@ npm_build:
     - aws --endpoint-url=https://storage.yandexcloud.net/ s3 cp --recursive ./ s3://admin-dev.wscloud.pro/
    only:
    - features-New_CI 
-   - develop 
 
