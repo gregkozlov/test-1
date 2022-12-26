@@ -1,7 +1,7 @@
 import styles from "./style/main.module.scss";
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
-import { DashboardNavigation, RoutesContainer } from "./shared/";
+import { DashboardNavigation, Header, RoutesContainer, Grid, Col, Row } from "./shared/";
 import { LINKS_BOTTOM, LINKS_TOP } from "./constants/routes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -20,22 +20,21 @@ const App: React.FC = () => {
     <Suspense fallback={<div>loading...</div>}>
       {isAuth ? (
         <BrowserRouter>
-          <div>
-            <p>admin</p>
-          </div>
-          <div>
-            <button onClick={() => changeLanguage("en")}>EN</button>
-            <button onClick={() => changeLanguage("ru")}>RU</button>
-            <div>{t("text")}</div>
-          </div>
-          <div className={styles.route_block}>
-            <div className={styles.router_checking}>
-              <DashboardNavigation />
-            </div>
-            <div className={styles.route_screens}>
-              <RoutesContainer />
-            </div>
-          </div>
+          <Header />
+          <Grid fullHeight>
+            <Row>
+              <Col size={2}>
+                <div className={styles.router_checking}>
+                  <DashboardNavigation />
+                </div>
+              </Col>
+              <Col size={10}>
+                <div className={styles.route_screens}>
+                  <RoutesContainer />
+                </div>
+              </Col>
+            </Row>
+          </Grid>
         </BrowserRouter>
       ) : (
         <LoginPage />

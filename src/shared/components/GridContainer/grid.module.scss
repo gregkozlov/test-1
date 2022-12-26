@@ -2,18 +2,32 @@
 
 .grid_container {
   display: flex;
-  padding: 0 15px;
   flex-direction: column;
+}
+
+.full_height {
+  height: 100%;
+  &__inner_content {
+    > * {
+      height: 100%;
+    }
+  }
 }
 
 .row {
   flex-direction: row;
   justify-content: space-between;
   display: flex;
+  flex: 1;
 }
-
+.col {
+  display: flex;
+  flex-direction: column;
+}
 @for $i from 1 through 12 {
   .col__#{$i} {
     flex-basis: $i * 100% / 12;
+    max-width: $i * 100% / 12;
+
   }
 }

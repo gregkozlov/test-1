@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, Routes, Route } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useLocation, Routes, Route, matchPath } from "react-router-dom";
 
-import { LINKS_BOTTOM, LINKS_TOP } from "../../constants/routes";
-import { linkItemType } from "../../constants/routes/types";
+import { LINKS_BOTTOM, LINKS_TOP } from "../../../constants/routes";
+import { linkItemType } from "../../../constants/routes/types";
 import NavigationItem from "./components/NavigationItem";
+import { changeTitle } from "../../../appSlices";
+
 import styles from "./navigation.module.scss";
 
 const Navigation: React.FC = () => {
   const [activeLink, setActiveLink] = useState("");
-  const location = useLocation();
 
   useEffect(() => {
     const links = [...LINKS_BOTTOM, ...LINKS_TOP];
@@ -61,6 +63,17 @@ const RoutesContainer: React.FC = () => {
       .flat(2)
       .filter((element) => element);
   };
+  const { pathname } = useLocation();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const route = normalizeRoutes([...LINKS_TOP, ...LINKS_BOTTOM])
+      .reverse()
+      .find((route) => {
+        return route?.url && matchPath({ path: route.url }, pathname);
+      });
+    dispatch(changeTitle(route?.title));
+  }, [pathname]);
 
   return (
     <Routes>

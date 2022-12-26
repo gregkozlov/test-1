@@ -1,9 +1,9 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { userSliceReducer, themeSliceReducer } from "../appSlices";
+import { userSliceReducer, layoutSliceReducer } from "../appSlices";
 
 const rootReducer = combineReducers({
   userSliceReducer,
-  themeSliceReducer
+  layoutSliceReducer
 });
 
 export const store = configureStore({
