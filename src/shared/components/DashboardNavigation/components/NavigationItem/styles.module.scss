@@ -11,6 +11,9 @@
   text-decoration: none;
   padding: 15px 20px 15px 40px;
   border-radius: 5px;
+  &:hover {
+    box-shadow: 0 0 0 1px #4b47ff
+  }
   &.active {
     background-color: #4b47ff;
     color: #fff;
@@ -34,6 +37,10 @@
   display: block;
   text-decoration: none;
   border-radius: 5px;
+  &:hover {
+    box-shadow: 0 0 0 1px #c5c4ff;
+
+  }
   &.active {
     font-weight: 500;
     color: #14142a;

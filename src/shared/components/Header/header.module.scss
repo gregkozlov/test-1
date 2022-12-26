@@ -1,0 +1,18 @@
+.header {
+  height: 100px;
+  &__title {
+    font-size: 36px;
+    font-weight: 300;
+    margin-left: 15px;
+  }
+  &__date_time_container {
+    text-align: center;
+  }
+
+  .logo_container {
+    padding: 15px;
+    &__icon {
+      width: 100%;
+    }
+  }
+}

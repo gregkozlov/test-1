@@ -1,44 +1,50 @@
-import DashboardContainer from "../../shared/DashboardContainer";
-import Grid, { Row, Col } from "../../shared/GridContainer";
+import { DashboardContainer, Grid, Row, Col, Text } from "../../shared";
+import DashBoardTable from "./components/Table";
+import styles from "./dashboard.module.scss";
 
 const DashboardScreen: React.FC = () => {
   return (
-    <div>
-      <h1>Dashboard</h1>
+    <div className={styles.dashboard}>
       <Grid>
         <Row bottomSpace={20}>
-          <Col size={6} rightSpace={10}>
+          <Col size={7} rightSpace={10}>
             <DashboardContainer>
-              <>Выручка</>
+              <Text color="#93939D">Выручка:</Text>
+              <Text bold size="extra-large">
+                0 ₽
+              </Text>
+              <Text bold size="large">
+                Admin T.
+              </Text>
             </DashboardContainer>
           </Col>
-          <Col size={6} leftSpace={10}>
-            <Row>
-              <Col size={4}>
+          <Col size={5} leftSpace={10}>
+            <Row customStyles={{ flex: 1 }}>
+              <Col contentFullHeight size={4}>
                 <DashboardContainer>
                   <>Наличные</>
                 </DashboardContainer>
               </Col>
-              <Col size={4} leftSpace={20} rightSpace={20}>
+              <Col contentFullHeight size={4} leftSpace={20} rightSpace={20}>
                 <DashboardContainer>
                   <>Безналичные</>
                 </DashboardContainer>
               </Col>
-              <Col size={4}>
+              <Col contentFullHeight size={4}>
                 <DashboardContainer>
-                  <>Загрузка клуб</>
+                  <>Загрузка клуба</>
                 </DashboardContainer>
               </Col>
             </Row>
           </Col>
         </Row>
         <Row>
-          <Col size={6} rightSpace={10}>
+          <Col size={7} rightSpace={10} customStyles={{}}>
             <DashboardContainer>
-              <>Пополнения</>
+              <DashBoardTable />
             </DashboardContainer>
           </Col>
-          <Col size={6} leftSpace={10}>
+          <Col size={5} leftSpace={10} contentFullHeight>
             <DashboardContainer>
               <>Выручка</>
             </DashboardContainer>
