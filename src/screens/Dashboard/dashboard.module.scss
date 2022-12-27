@@ -1,5 +1,7 @@
 .dashboard {
   padding: 20px 30px;
   height: calc(100vh - 100px);
-
+  &.dark {
+    background-color: #1E1E1E;
+  }
 }

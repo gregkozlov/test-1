@@ -1,6 +1,12 @@
+@import "/src/style/colors.scss";
+
 .dashboardContainer {
   padding: 20px;
   border-radius: 10px;
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
   background-color: #fff;
+  &.dark {
+    background-color: map-get($background_colors_dark_theme, "primary" );
+    color: map-get($font_colors_dark_theme, "primary" );
+  }
 }

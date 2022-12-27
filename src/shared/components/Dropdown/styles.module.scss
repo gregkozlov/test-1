@@ -1,0 +1,42 @@
+@import "/src/style/colors.scss";
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  &_items {
+    position: absolute;
+    background-color: map-get($background_colors_light_theme, "primary");
+    width: 100%;
+    top: 45px;
+    z-index: 1;
+    border: 1px solid map-get($button_colors_light_theme, "primary");
+    border-radius: 5px;
+  }
+  &__item {
+    padding: 15px;
+    position: relative;
+    &:not(:last-child) {
+      border-bottom: 1px solid map-get($button_colors_light_theme, "primary");
+    }
+    // margin: 0 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &.dark {
+    .dropdown_items {
+      background: map-get($background_colors_dark_theme, "secondary");
+      color: map-get($background_colors_light_theme, "primary");
+      border: 1px solid map-get($background_colors_dark_theme, "primary");
+      .dropdown__item {
+        background: map-get($background_colors_dark_theme, "secondary");
+        &:not(:last-child) {
+          border-bottom: 1px solid map-get($background_colors_light_theme, "primary");
+        }
+      }
+    }
+  }
+}

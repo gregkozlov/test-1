@@ -1,3 +1,5 @@
+@import "/src/style/colors.scss";
+// button_colors_dark_theme
 .link {
   display: none;
   font-family: Montserrat;
@@ -7,16 +9,16 @@
   letter-spacing: 0em;
   display: block;
   text-align: left;
-  color: #14142a;
+  color: map-get($font_colors_light_theme, "primary");
   text-decoration: none;
   padding: 15px 20px 15px 40px;
   border-radius: 5px;
   &:hover {
-    box-shadow: 0 0 0 1px #4b47ff
+    box-shadow: 0 0 0 1px map-get($navigation, "primary");
   }
   &.active {
-    background-color: #4b47ff;
-    color: #fff;
+    background-color: map-get($navigation, "primary");
+    color: map-get($navigation, "active_link_primary");
   }
   &__icon {
     position: absolute;
@@ -26,11 +28,22 @@
     width: 20px;
     left: 10px;
   }
+  &.dark {
+    // background-color: map-get($navigation_dark, "bachground");
+    color: map-get($font_colors_dark_theme, "primary");
+    &:hover {
+      box-shadow: 0 0 0 1px map-get($navigation, "active_link_primary");
+    }
+    &.active {
+      background-color: map-get($navigation, "primary");
+      color: map-get($navigation, "active_link_primary");
+    }
+  }
 }
 
 .sub_link {
   font-size: 15px;
-  color: #14142a;
+  color: map-get($font_colors_light_theme, "primary");
   font-weight: 400;
   padding: 10px;
   margin: 3px 10px 3px 0;
@@ -38,14 +51,25 @@
   text-decoration: none;
   border-radius: 5px;
   &:hover {
-    box-shadow: 0 0 0 1px #c5c4ff;
-
+    box-shadow: 0 0 0 1px map-get($navigation, "secondary");
   }
   &.active {
     font-weight: 500;
-    color: #14142a;
-    background-color: #c5c4ff;
+    color: map-get($font_colors_light_theme, "primary");
+    background-color: map-get($navigation, "secondary");
     text-decoration: none;
+  }
+  &.dark {
+    // .sub_link {
+    color: map-get($font_colors_dark_theme, "primary");
+    &:hover {
+      box-shadow: 0 0 0 1px map-get($navigation_dark, "secondary");
+    }
+    &.active {
+      color: map-get($font_colors_light_theme, "primary");
+      background-color: map-get($navigation_dark, "secondary");
+    }
+    // }
   }
 }
 
@@ -65,5 +89,23 @@
     top: 50%;
     right: 15px;
     transform: translateY(-50%);
+  }
+  &.dark {
+    &.active {
+      .link__chevron_down,
+      .link__icon {
+      filter: invert(0%) sepia(0%);
+
+        path{
+          fill: map-get($navigation_dark, "active_link_primary");
+        }
+      }
+    }
+    .link__chevron_down,
+    .link__icon {
+      path {
+        fill: map-get($navigation_dark, "active_link_primary");
+      }
+    }
   }
 }

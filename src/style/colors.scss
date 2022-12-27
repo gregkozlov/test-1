@@ -63,3 +63,26 @@ $action_colors: (
   "error": #f5847d,
   "warning": #975b00
 );
+
+// NAVIGATION
+
+$navigation: (
+  "primary": #4b47ff,
+  "secondary": #c5c4ff,
+  "active_link_primary": #fff,
+  "hr": #a0a0a9
+);
+$navigation_dark: (
+  "primary": #4b47ff,
+  "secondary": #c5c4ff,
+  "active_link_primary": #fff,
+  "hr": #fff,
+  "bachground": #181818
+);
+
+// table
+
+$table: (
+  "border": #d9d9d9,
+  "row-bg": #f4f2f1
+);
