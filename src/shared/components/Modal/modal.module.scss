@@ -1,0 +1,13 @@
+.container {
+  position: absolute;
+  width: 100vw;
+  height: 100hw;
+
+  &__light {
+    background: black;
+  }
+
+  &__dark {
+    background: white;
+  }
+}
