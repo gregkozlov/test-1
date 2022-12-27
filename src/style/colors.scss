@@ -43,9 +43,10 @@ $font_colors_dark_theme: (
 // INPUT
 
 $input_colors_light_theme: (
-  // "primary": #ffffff,
-  "primary": #f5f5ff,
-  "border": #93939d,
+  "primary": #ffffff,
+  // "primary": #f5f5ff,
+  // "border": #93939d,
+  "border": #cecedb,
   "active": map-get($button_colors_light_theme, "primary")
 );
 

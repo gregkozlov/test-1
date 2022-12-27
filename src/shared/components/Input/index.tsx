@@ -30,7 +30,7 @@ const Input: React.FC<InputProps> = ({
       <div className={styles.relative}>
         <input
           disabled={disabled}
-          type={type == "password" ? fieldType : type}
+          type={type === "password" ? fieldType : type}
           className={`${styles.field} ${styles[size]} ${styles[theme]} ${errors ? styles.error : ""}`}
           placeholder={placeholder}
           value={value}
@@ -38,7 +38,7 @@ const Input: React.FC<InputProps> = ({
           onBlur={onBlur}
           name={name}
         />
-        {type == "password" && (
+        {type === "password" && (
           <img
             className={`${styles.eye_icon}  ${errors ? styles?.eye_icon__error_img : ""}`}
             src={InputEye}

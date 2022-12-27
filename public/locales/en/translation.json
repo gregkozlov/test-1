@@ -4,7 +4,8 @@
   },
   "placeholders": {
     "login": "Enter your Login",
-    "password": "Enter your Password"
+    "password": "Enter your Password",
+    "search": "Search"
   },
   "labels": {
     "login": "Login",
@@ -35,6 +36,11 @@
         "balance": "Balance",
         "discount": "Discount"
       }
+    }
+  },
+  "clients": {
+    "buttons": {
+      "createClient": "Create client"
     }
   }
 }

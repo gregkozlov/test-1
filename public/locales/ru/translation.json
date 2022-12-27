@@ -4,7 +4,8 @@
   },
   "placeholders": {
     "login": "Введите логин",
-    "password": "Введите пароль"
+    "password": "Введите пароль",
+    "search": "Поиск"
   },
   "labels": {
     "login": "Логин",
@@ -35,6 +36,11 @@
         "balance": "Баланс",
         "discount": "Скидка"
       }
+    }
+  },
+  "clients": {
+    "buttons": {
+      "createClient": "Создать клиента"
     }
   }
 }

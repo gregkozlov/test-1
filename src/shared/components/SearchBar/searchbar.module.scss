@@ -1,0 +1,143 @@
+@import "/src/style/colors.scss";
+
+.relative {
+  position: relative;
+}
+
+.input {
+  &__label {
+    margin: 8px auto;
+    margin-left: 10px;
+
+    &.light {
+      color: map-get($font_colors_light_theme, "primary");
+    }
+
+    &.dark {
+      color: map-get($font_colors_dark_theme, "primary");
+    }
+  }
+
+  .error {
+    color: map-get($action_colors, "error");
+  }
+}
+
+.field {
+  border: 2px solid;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+
+  &.light {
+    border-color: map-get($input_colors_light_theme, "border");
+    background-color: map-get($input_colors_light_theme, "primary");
+    color: map-get($font_colors_light_theme, "primary");
+
+    &:focus {
+      border-color: map-get($input_colors_light_theme, "active");
+    }
+  }
+
+  &.dark {
+    border-color: map-get($input_colors_dark_theme, "border");
+    background-color: map-get($input_colors_dark_theme, "primary");
+    color: map-get($font_colors_dark_theme, "primary");
+
+    &:focus {
+      border-color: map-get($input_colors_light_theme, "active");
+    }
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: none;
+    // border: 2px solid map-get($neutral_colors, "neutral_30");
+  }
+
+  &.large {
+    height: 65px;
+    border-radius: 10px;
+
+    padding: 0 30px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  &.medium {
+    height: 40px;
+    border-radius: 10px;
+
+    padding: 0 10px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &.small {
+    // the same as the medium one
+    height: 45px;
+    border-radius: 10px;
+
+    padding: 0 10px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.icon {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  border: 0;
+
+  &__error_img {
+    filter: brightness(0) saturate(100%) invert(78%) sepia(47%) saturate(1522%) hue-rotate(306deg) brightness(99%)
+      contrast(94%);
+  }
+
+  &:hover {
+    filter: brightness(150%);
+    transition: 0.3s;
+  }
+}
+
+.error {
+  // color: map-get($action_colors, "error");
+  // font-family: "Montserrat", sans-serif;
+  // margin-top: 5px;
+  // margin-left: 10px;
+  // font-size: 14px;
+
+  &__label {
+    color: map-get($action_colors, "error");
+    font-family: "Montserrat", sans-serif;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 14px;
+
+    &.large {
+      // font-size: 16px;
+    }
+
+    &.medium {
+      // font-size: 16px;
+    }
+
+    &.small {
+      // font-size: 16px;
+    }
+  }
+}

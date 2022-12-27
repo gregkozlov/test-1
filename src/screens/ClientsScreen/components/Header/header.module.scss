@@ -1,7 +1,15 @@
 .header {
   margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .input_container {
+  max-width: 25%;
+}
+
+.button_container {
   max-width: 25%;
 }
