@@ -1,7 +1,11 @@
-$table_header: #fff;
+@import "/src/style/colors.scss";
+
+$table_header: map-get($background_colors_light_theme, "primary");
 $table_header_border: transparent;
-$table-border: #d9d9d9;
-$row-bg: #f4f2f1;
+$table-border: map-get($table, "border");
+$row-bg: map-get($table, "row-bg");
+
+$table_header_dark: map-get($background_colors_dark_theme, "primary");
 
 div {
   box-sizing: border-box;
@@ -21,6 +25,9 @@ div {
 .right_icon {
   margin-left: 5px;
   cursor: pointer;
+  &.dark {
+    filter: invert(100%);
+  }
 }
 
 .table_container {
@@ -47,7 +54,7 @@ div {
   margin-right: 3px;
 
   // border-left: solid 1px $table_border;
-  transition: 0.5s;
+  // transition: 0.5s;
   &:first-of-type {
     border: solid 1px $table_header_border;
     align-items: center;
@@ -56,24 +63,23 @@ div {
     box-shadow: none;
     margin: 0 0 10px;
     top: 0;
-    background-color: #fff;
+    background-color: $table_header;
+    &.dark {
+      background: $table_header_dark;
+    }
   }
   &:first-of-type .flex_row {
-    background: $table_header;
+    // background: $table_header;
     border-color: $table_header_border;
     padding: 0.5em;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+    &.dark {
+      // background: $table_header_dark
+    }
   }
-  // &.row:nth-child(odd) .flex_row {
-  //   background: $row-bg;
-  // }
-  // &:hover {
-  //   background: #F5F5F5;
-  //   transition: 500ms;
-  // }
 }
 
 .flex_row {
@@ -102,7 +108,7 @@ div {
     // border-bottom: solid 1px $table-border;
     &:hover {
       background: #f5f5f5;
-      transition: 500ms;
+      // transition: 500ms;
     }
   }
 }

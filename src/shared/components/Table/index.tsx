@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Text } from "..";
+import { useTheme } from "../../hooks";
 import { ChevronDown } from "../../images";
 
 import styles from "./styles.module.scss";
@@ -13,22 +14,24 @@ const Table: React.FC<TableType> = ({ table, rowStyles }) => {
     const rowWidthStyle = createFlexRowGridStyle(table.header.length);
     setRowWidth(rowWidthStyle);
   }, [table]);
+
+  const theme = useTheme();
   return (
     <div className={styles.table}>
       <div className={styles.table_container} role="table" aria-label="Destinations">
-        <div className={`${styles.flex_table} ${styles.header}`} role="rowgroup">
+        <div className={`${styles.flex_table} ${styles.header} ${styles[theme]}`} role="rowgroup">
           {table.header.map((item) => {
             return (
               <div
                 // todo
                 key={JSON.stringify(item)}
-                className={`${styles.flex_row}`}
+                className={`${styles.flex_row} ${styles[theme]}`}
                 style={{ width: rowWidth }}
                 role="columnheader">
                 <Text align="center" bold size={"small"}>
                   {item.title}
                 </Text>
-                {(item.rightIcon && <ChevronDown className={styles.right_icon} />) || null}
+                {(item.rightIcon && <ChevronDown className={`${styles.right_icon} ${styles[theme]}`} />) || null}
               </div>
             );
           })}

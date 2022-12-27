@@ -8,9 +8,11 @@ import NavigationItem from "./components/NavigationItem";
 import { changeTitle } from "../../../appSlices";
 
 import styles from "./navigation.module.scss";
+import { useTheme } from "../../hooks";
 
 const Navigation: React.FC = () => {
   const [activeLink, setActiveLink] = useState("");
+  const theme = useTheme();
 
   useEffect(() => {
     const links = [...LINKS_BOTTOM, ...LINKS_TOP];
@@ -22,7 +24,7 @@ const Navigation: React.FC = () => {
   }, []);
 
   return (
-    <div className={styles.navbar}>
+    <div className={`${styles.navbar}  ${styles[theme]}`}>
       <div className={styles.navbar_section}>
         {LINKS_TOP.map((link) => (
           <NavigationItem

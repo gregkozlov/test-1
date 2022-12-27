@@ -1,10 +1,12 @@
 import { DashboardContainer, Grid, Row, Col, Text } from "../../shared";
+import { useTheme } from "../../shared/hooks";
 import DashBoardTable from "./components/Table";
 import styles from "./dashboard.module.scss";
 
 const DashboardScreen: React.FC = () => {
+  const theme = useTheme();
   return (
-    <div className={styles.dashboard}>
+    <div className={`${styles.dashboard} ${styles[theme]}`}>
       <Grid>
         <Row bottomSpace={20}>
           <Col size={7} rightSpace={10}>
