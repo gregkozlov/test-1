@@ -22,5 +22,19 @@
     "longPassword": "Слишком длинный пароль",
     "invalidPhone": "Неверный формат номера",
     "invalidLogin": "Использование символов запрещено"
+  },
+  "tables": {
+    "clients": {
+      "header": {
+        "login": "Логин",
+        "name": "Имя",
+        "phoneNumber": "Номер Телефона",
+        "email": "Почта",
+        "registratonDate": "Дата Регистрации",
+        "lastVisit": "Последний визит",
+        "balance": "Баланс",
+        "discount": "Скидка"
+      }
+    }
   }
 }

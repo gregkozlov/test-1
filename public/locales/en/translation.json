@@ -22,5 +22,19 @@
     "longPassword": "Password is too long",
     "invalidPhone": "Invalid phone number",
     "invalidLogin": "Symbols are not allowed"
+  },
+  "tables": {
+    "clients": {
+      "header": {
+        "login": "Login",
+        "name": "Name",
+        "phoneNumber": "Phone Number",
+        "email": "Email",
+        "registratonDate": "Registration Date",
+        "lastVisit": "Last Visit",
+        "balance": "Balance",
+        "discount": "Discount"
+      }
+    }
   }
 }

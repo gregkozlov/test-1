@@ -5,13 +5,14 @@ import { DashboardNavigation, Header, RoutesContainer, Grid, Col, Row } from "./
 import { LINKS_BOTTOM, LINKS_TOP } from "./constants/routes";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { LoginPage } from "./pages";
+import { LoginScreen } from "./screens";
 import { RootState } from "./store";
 
 const App: React.FC = () => {
   const { t, i18n } = useTranslation();
 
-  const isAuth = useSelector<RootState>((state) => state.rootReducer.userSliceReducer.isAuth);
+  // const isAuth = useSelector<RootState>((state) => state.rootReducer.userSliceReducer.isAuth);
+  const isAuth = true;
 
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
@@ -37,7 +38,7 @@ const App: React.FC = () => {
           </Grid>
         </BrowserRouter>
       ) : (
-        <LoginPage />
+        <LoginScreen />
       )}
     </Suspense>
   );

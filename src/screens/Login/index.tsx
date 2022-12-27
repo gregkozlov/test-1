@@ -4,7 +4,6 @@ import { useTheme } from "../../shared/hooks";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { switchTheme } from "../../appSlices";
-import { useCallback, useEffect } from "react";
 
 const LoginPage: React.FC = () => {
   const theme = useTheme();
