@@ -7,12 +7,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { LoginScreen } from "./screens";
 import { RootState } from "./store";
+import { useTheme } from "./shared/hooks";
 
 const App: React.FC = () => {
   const { t, i18n } = useTranslation();
 
-  // const isAuth = useSelector<RootState>((state) => state.rootReducer.userSliceReducer.isAuth);
-  const isAuth = true;
+  const theme = useTheme();
+  const isAuth = useSelector<RootState>((state) => state.rootReducer.userSliceReducer.isAuth);
 
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
@@ -25,12 +26,12 @@ const App: React.FC = () => {
           <Grid fullHeight>
             <Row>
               <Col size={2}>
-                <div className={styles.router_checking}>
+                <div className={`${styles.router_checking} ${styles[theme]}`}>
                   <DashboardNavigation />
                 </div>
               </Col>
               <Col size={10}>
-                <div className={styles.route_screens}>
+                <div className={`${styles.route_screens} ${styles[theme]}`}>
                   <RoutesContainer />
                 </div>
               </Col>

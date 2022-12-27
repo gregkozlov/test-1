@@ -1,8 +1,10 @@
 import { Printer, Recoveryconvert, Repeat } from "../../images";
 import { Text, Table } from "../../../../shared/";
 import styles from "./styles.module.scss";
+import { useTheme } from "../../../../shared/hooks";
 
 const DashBoardTable = () => {
+  const theme = useTheme();
   const table = {
     header: [
       {
@@ -81,9 +83,9 @@ const DashBoardTable = () => {
         {
           content: (
             <div className={styles.flex_nowrap}>
-              <Printer className={styles.icon} />
-              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15}`} />
-              <Repeat className={styles.icon} />
+              <Printer className={`${styles.icon} ${styles[theme]}`} />
+              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15} ${styles[theme]}`} />
+              <Repeat className={`${styles.icon} ${styles[theme]}`} />
             </div>
           )
         }
@@ -134,9 +136,9 @@ const DashBoardTable = () => {
         {
           content: (
             <div className={styles.flex_nowrap}>
-              <Printer className={styles.icon} />
-              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15}`} />
-              <Repeat className={styles.icon} />
+              <Printer className={`${styles.icon} ${styles[theme]}`} />
+              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15} ${styles[theme]}`} />
+              <Repeat className={`${styles.icon} ${styles[theme]}`} />
             </div>
           )
         }
@@ -187,9 +189,9 @@ const DashBoardTable = () => {
         {
           content: (
             <div className={styles.flex_nowrap}>
-              <Printer className={styles.icon} />
-              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15}`} />
-              <Repeat className={styles.icon} />
+              <Printer className={`${styles.icon} ${styles[theme]}`} />
+              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15} ${styles[theme]}`} />
+              <Repeat className={`${styles.icon} ${styles[theme]}`} />
             </div>
           )
         }
@@ -240,9 +242,9 @@ const DashBoardTable = () => {
         {
           content: (
             <div className={styles.flex_nowrap}>
-              <Printer className={styles.icon} />
-              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15}`} />
-              <Repeat className={styles.icon} />
+              <Printer className={`${styles.icon} ${styles[theme]}`} />
+              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15} ${styles[theme]}`} />
+              <Repeat className={`${styles.icon} ${styles[theme]}`} />
             </div>
           )
         }
@@ -293,9 +295,9 @@ const DashBoardTable = () => {
         {
           content: (
             <div className={styles.flex_nowrap}>
-              <Printer className={styles.icon} />
-              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15}`} />
-              <Repeat className={styles.icon} />
+              <Printer className={`${styles.icon} ${styles[theme]}`} />
+              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15} ${styles[theme]}`} />
+              <Repeat className={`${styles.icon} ${styles[theme]}`} />
             </div>
           )
         }
@@ -346,9 +348,9 @@ const DashBoardTable = () => {
         {
           content: (
             <div className={styles.flex_nowrap}>
-              <Printer className={styles.icon} />
-              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15}`} />
-              <Repeat className={styles.icon} />
+              <Printer className={`${styles.icon} ${styles[theme]}`} />
+              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15} ${styles[theme]}`} />
+              <Repeat className={`${styles.icon} ${styles[theme]}`} />
             </div>
           )
         }
@@ -399,9 +401,9 @@ const DashBoardTable = () => {
         {
           content: (
             <div className={styles.flex_nowrap}>
-              <Printer className={styles.icon} />
-              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15}`} />
-              <Repeat className={styles.icon} />
+              <Printer className={`${styles.icon} ${styles[theme]}`} />
+              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15} ${styles[theme]}`} />
+              <Repeat className={`${styles.icon} ${styles[theme]}`} />
             </div>
           )
         }
@@ -452,9 +454,9 @@ const DashBoardTable = () => {
         {
           content: (
             <div className={styles.flex_nowrap}>
-              <Printer className={styles.icon} />
-              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15}`} />
-              <Repeat className={styles.icon} />
+              <Printer className={`${styles.icon} ${styles[theme]}`} />
+              <Recoveryconvert className={`${styles.icon} ${styles.m_horizontal_15} ${styles[theme]}`} />
+              <Repeat className={`${styles.icon} ${styles[theme]}`} />
             </div>
           )
         }

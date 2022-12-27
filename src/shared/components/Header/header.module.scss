@@ -1,5 +1,17 @@
+@import "/src/style/colors.scss";
+
 .header {
   height: 100px;
+  &.dark {
+    background-color: map-get($background_colors_dark_theme, "primary");
+    color: map-get($font_colors_dark_theme, "button_primary");
+
+    svg {
+      path {
+        fill: map-get($font_colors_dark_theme, "button_primary");
+      }
+    }
+  }
   &__title {
     font-size: 36px;
     font-weight: 300;
@@ -14,5 +26,14 @@
     &__icon {
       width: 100%;
     }
+  }
+  &__dropdown_container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  .plus_button_container {
+    margin-right: 15px;
+    width: 60px;
   }
 }

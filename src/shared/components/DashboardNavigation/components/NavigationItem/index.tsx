@@ -4,6 +4,7 @@ import { ChevronDown } from "../../../../../shared/images";
 import { linkItemType } from "../../../../../constants/routes/types";
 
 import styles from "./styles.module.scss";
+import { useTheme } from "../../../../hooks";
 
 type NavigationItemType = {
   activeLink: string;
@@ -13,7 +14,7 @@ type NavigationItemType = {
 
 const NavigationItem: React.FC<NavigationItemType> = ({ link, setActiveLink, activeLink }) => {
   const [isDropdownActive, setIsDropdownActive] = useState(false);
-
+  const theme = useTheme();
   const handleDropdownToggle = () => {
     setIsDropdownActive((prev: boolean) => !prev);
   };
@@ -30,7 +31,9 @@ const NavigationItem: React.FC<NavigationItemType> = ({ link, setActiveLink, act
               setActiveLink(link.title);
             }}
             to={link.url}
-            className={() => (isDropdownActive ? `${styles.active} ${styles.link}` : styles.link)}
+            className={() =>
+              isDropdownActive ? `${styles.active} ${styles.link} ${styles[theme]}` : `${styles.link} ${styles[theme]}`
+            }
             key={link.title}>
             {link?.icon && <link.icon className={`${styles.link__icon}`} />}
             {link.title}
@@ -43,7 +46,9 @@ const NavigationItem: React.FC<NavigationItemType> = ({ link, setActiveLink, act
             <NavLink
               to={link.url}
               className={({ isActive }) => {
-                return isActive ? `${styles.sub_link} ${styles.active}` : styles.sub_link;
+                return isActive
+                  ? `${styles.sub_link} ${styles.active} ${styles[theme]}`
+                  : `${styles.sub_link} ${styles[theme]}`;
               }}
               key={link.title}>
               {link.title}
@@ -58,7 +63,7 @@ const NavigationItem: React.FC<NavigationItemType> = ({ link, setActiveLink, act
       <NavLink
         to={link.url}
         className={({ isActive }) => {
-          return isActive ? `${styles.active} ${styles.link}` : styles.link;
+          return isActive ? `${styles.active} ${styles.link} ${styles[theme]}` : `${styles.link} ${styles[theme]}`;
         }}
         onClick={() => {
           setActiveLink(link.title);
