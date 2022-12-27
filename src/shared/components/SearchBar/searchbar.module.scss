@@ -99,19 +99,8 @@
   right: 0px;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 25px;
-  height: 25px;
   border: 0;
-
-  &__error_img {
-    filter: brightness(0) saturate(100%) invert(78%) sepia(47%) saturate(1522%) hue-rotate(306deg) brightness(99%)
-      contrast(94%);
-  }
-
-  &:hover {
-    filter: brightness(150%);
-    transition: 0.3s;
-  }
+  cursor: pointer;
 }
 
 .error {

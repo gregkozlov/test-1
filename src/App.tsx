@@ -13,7 +13,8 @@ const App: React.FC = () => {
   const { t, i18n } = useTranslation();
 
   const theme = useTheme();
-  const isAuth = useSelector<RootState>((state) => state.rootReducer.userSliceReducer.isAuth);
+  // const isAuth = useSelector<RootState>((state) => state.rootReducer.userSliceReducer.isAuth);
+  const isAuth = true;
 
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);

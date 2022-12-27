@@ -3,6 +3,7 @@ import useClientsTable from "../../useClientsTable";
 
 const ClientsTable: React.FC = () => {
   const table = useClientsTable();
+  // TODO: table height
   return (
     <Table
       table={table}

@@ -12,4 +12,8 @@
 
 .button_container {
   max-width: 25%;
+
+  &__icon {
+    margin-left: 8px;
+  }
 }
