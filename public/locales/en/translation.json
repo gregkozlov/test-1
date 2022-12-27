@@ -22,5 +22,14 @@
     "longPassword": "Password is too long",
     "invalidPhone": "Invalid phone number",
     "invalidLogin": "Symbols are not allowed"
+  },
+  "navigation": {
+    "pages": {
+      "dashboard": "Dashboard",
+      "computers": "Computers",
+      "marketplace": "Marketplace",
+      "clients": "Clients",
+      "logs": "Error Logs"
+    }
   }
 }

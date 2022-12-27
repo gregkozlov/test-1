@@ -22,5 +22,18 @@
     "longPassword": "Слишком длинный пароль",
     "invalidPhone": "Неверный формат номера",
     "invalidLogin": "Использование символов запрещено"
+  },
+  "navigation": {
+    "pages": {
+      "dashboard": "Дашборд",
+      "computers": "Компьютеры",
+      "marketplace": "Магазин",
+      "clients": "Клиенты",
+      "logs": "Логи ошибок",
+      "spaceMap": "Карта клуба",
+      "profile": "Профиль",
+      "products": "Товары",
+      "service": "Услуги"
+    }
   }
 }
