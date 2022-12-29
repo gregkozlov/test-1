@@ -1,0 +1,19 @@
+.additional_info_container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  justify-content: space-between;
+  .additional_info_item {
+    display: flex;
+    &>*:first-child{
+      margin-right: 8px;
+    }
+  }
+  .additional_info_footer {
+    margin-bottom: 20px;
+    .additional_info_item{
+      margin-bottom: 7px;
+    }
+  }
+}

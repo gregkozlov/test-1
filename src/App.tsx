@@ -22,7 +22,7 @@ const App: React.FC = () => {
       {isAuth ? (
         <BrowserRouter>
           <Header />
-          <Grid fullHeight>
+          <Grid>
             <Row>
               <Col size={2}>
                 <div className={`${styles.router_checking} ${styles[theme]}`}>

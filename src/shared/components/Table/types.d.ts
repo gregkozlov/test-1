@@ -8,5 +8,7 @@ type TableType = {
       content: JSX.Element;
     }[][];
   };
+  height: number | string;
+  onRowClick?: () => void;
   rowStyles: { [key: string]: string | number };
 };

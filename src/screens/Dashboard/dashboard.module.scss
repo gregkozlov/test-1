@@ -1,7 +1,21 @@
 .dashboard {
   padding: 20px 30px;
-  height: calc(100vh - 100px);
+  // height: calc(100vh - 100px);
   &.dark {
-    background-color: #1E1E1E;
+    background-color: #1e1e1e;
+  }
+  .chart {
+    position: relative;
+    max-width: max-content;
+    .total {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+    }
+  }
+  .chart_header {
+    margin-bottom: 20px;
   }
 }

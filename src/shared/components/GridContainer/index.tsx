@@ -4,10 +4,10 @@ import styles from "./grid.module.scss";
 const createStyles = (spaces: SpacesType) => {
   const { topSpace, bottomSpace, leftSpace, rightSpace } = spaces;
   const normalizedSpacesStyles = {
-    marginTop: topSpace,
-    marginBottom: bottomSpace,
-    marginLeft: leftSpace,
-    marginRight: rightSpace
+    paddingTop: topSpace,
+    paddingBottom: bottomSpace,
+    paddingLeft: leftSpace,
+    paddingRight: rightSpace
   };
 
   return normalizedSpacesStyles;
