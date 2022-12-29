@@ -1,20 +1,25 @@
+@import "/src/style/colors.scss";
+
 .notes {
   &__header {
     margin-bottom: 20px;
   }
   &__row {
     border-radius: 10px;
-    border: 1px solid #4b47ff;
+    border: 1px solid map-get($notes, "primary");
     margin-bottom: 20px;
     padding: 10px;
+    .edit{
+      cursor: pointer;
+    }
     .circle {
       border-radius: 50%;
-      background-color: #d9d9d9;
+      background-color: map-get($notes, "secondary");
       height: 20px;
       width: 20px;
       align-self: center;
       &.checked {
-        background-color: #4b47ff;
+        background-color: map-get($notes, "primary");
       }
     }
     &__title {
