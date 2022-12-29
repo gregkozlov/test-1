@@ -29,21 +29,24 @@ const Col = ({
   leftSpace,
   rightSpace,
   contentFullHeight = false,
-  customStyles
+  customStyles,
+  className
 }: ColType) => {
   return (
     <div
-      className={`${styles[`col__${size}`]} ${styles.col} ${contentFullHeight && styles.full_height__inner_content}`}
+      className={`${styles[`col__${size}`]} ${styles.col} ${
+        contentFullHeight && styles.full_height__inner_content
+      }  ${className}`}
       style={{ ...createStyles({ topSpace, bottomSpace, leftSpace, rightSpace }), ...customStyles }}>
       {children}
     </div>
   );
 };
 
-const Row = ({ children, topSpace, bottomSpace, customStyles, leftSpace, rightSpace }: RowType) => {
+const Row = ({ children, topSpace, bottomSpace, customStyles, leftSpace, rightSpace, className }: RowType) => {
   return (
     <div
-      className={styles.row}
+      className={`${styles.row} ${className}`}
       style={{ ...createStyles({ bottomSpace, topSpace, leftSpace, rightSpace }), ...customStyles }}>
       {children}
     </div>

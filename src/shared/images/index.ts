@@ -10,3 +10,4 @@ export { ReactComponent as Book } from "./book.svg";
 export { ReactComponent as Cloud } from "./cloud.svg";
 export { ReactComponent as Settings } from "./settings.svg";
 export { ReactComponent as ChevronDown } from "./dropdown.svg";
+export { ReactComponent as Edit } from "./edit.svg";

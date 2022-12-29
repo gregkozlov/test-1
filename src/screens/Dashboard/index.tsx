@@ -5,6 +5,7 @@ import AdditionalInfo from "./components/AdditionalInfo";
 import Statistics from "./components/Statistics";
 import styles from "./dashboard.module.scss";
 import { PieChart } from "react-minimal-pie-chart";
+import Notes from "./components/Notes";
 
 const DashboardScreen: React.FC = () => {
   const theme = useTheme();
@@ -63,7 +64,7 @@ const DashboardScreen: React.FC = () => {
           </Col>
           <Col size={5} leftSpace={10} contentFullHeight>
             <DashboardContainer>
-              <>Выручка</>
+              <Notes />
             </DashboardContainer>
           </Col>
         </Row>

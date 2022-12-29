@@ -34,8 +34,8 @@ div {
   display: block;
   min-width: 800px;
   // max-width: 850px;
-  max-height: 505px;
-  overflow: auto;
+  // max-height: 505px;
+  overflow-y: auto;
   position: relative;
   // padding-bottom: 20px;
 }
@@ -105,10 +105,8 @@ div {
     width: 100%;
     padding: 0;
     border: 0;
-    // border-bottom: solid 1px $table-border;
     &:hover {
       background: #f5f5f5;
-      // transition: 500ms;
     }
   }
 }
@@ -123,54 +121,3 @@ div {
     // border-right: 0;
   }
 }
-
-// @media all and (max-width: 767px) {
-//   .flex_row {
-//     width: calc(100% / 3); //1px = border right
-
-//     &.first {
-//       width: 100%;
-//     }
-//   }
-
-//   .column {
-//     width: 100%;
-//   }
-// }
-
-// @media all and (max-width: 430px) {
-//   .flex_table {
-//     .flex_row {
-//       border-bottom: 0;
-//     }
-//     .flex_row:last-of-type {
-//       border-bottom: solid 1px $table-border;
-//     }
-//   }
-
-//   .header {
-//     .flex_row {
-//       border-bottom: solid 1px;
-//     }
-//   }
-
-//   .flex_row {
-//     width: 100%; //1px = border right
-
-//     &.first {
-//       width: 100%;
-//       border-bottom: solid 1px $table-border;
-//     }
-//   }
-
-//   .column {
-//     width: 100%;
-//     .flex_row {
-//       border-bottom: solid 1px $table-border;
-//     }
-//   }
-
-//   .flex_cell {
-//     width: 100%; //1px = border right
-//   }
-// }

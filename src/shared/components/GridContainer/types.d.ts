@@ -2,6 +2,7 @@ type GridType = {
   children: React.ReactNode;
   fullHeight?: boolean;
   customStyles?: { [key: string]: string | number };
+  className?: string;
 };
 
 type Enumerate<N extends number, Acc extends number[] = []> = Acc["length"] extends N
@@ -20,6 +21,7 @@ type SpacesType = Partial<
 
 type ColType = {
   children: React.ReactNode;
+  className?: string;
   size: NumbersRange<1, 13>;
   customStyles?: { [key: string]: string };
   contentFullHeight?: boolean;

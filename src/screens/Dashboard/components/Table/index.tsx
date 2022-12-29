@@ -465,7 +465,7 @@ const DashBoardTable = () => {
   };
   return (
     <Table
-      height={498}
+      height={`calc(100vh - 410px)`}
       table={table}
       rowStyles={{
         border: "1px solid $table-border",
