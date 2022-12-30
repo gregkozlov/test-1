@@ -19,7 +19,7 @@ const App: React.FC = () => {
   };
   return (
     <Suspense fallback={<div>loading...</div>}>
-      {isAuth ? (
+      {!isAuth ? (
         <BrowserRouter>
           <Header />
           <Grid>

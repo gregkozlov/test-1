@@ -5,6 +5,8 @@ import AdditionalInfo from "./components/AdditionalInfo";
 import Statistics from "./components/Statistics";
 import styles from "./dashboard.module.scss";
 import { PieChart } from "react-minimal-pie-chart";
+import InCashRegister from "./components/InCashRegister";
+import ClubLoad from "./components/ClubLoad";
 import Notes from "./components/Notes";
 
 const DashboardScreen: React.FC = () => {
@@ -50,7 +52,10 @@ const DashboardScreen: React.FC = () => {
               </Col>
               <Col contentFullHeight size={5} leftSpace={20}>
                 <DashboardContainer>
-                  <AdditionalInfo />
+                  <InCashRegister />
+                </DashboardContainer>
+                <DashboardContainer topSpace={20}>
+                  <ClubLoad />
                 </DashboardContainer>
               </Col>
             </Row>
