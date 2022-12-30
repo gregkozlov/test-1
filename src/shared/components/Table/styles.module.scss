@@ -64,6 +64,7 @@ div {
     margin: 0 0 10px;
     top: 0;
     background-color: $table_header;
+    z-index: 1;
     &.dark {
       background: $table_header_dark;
     }

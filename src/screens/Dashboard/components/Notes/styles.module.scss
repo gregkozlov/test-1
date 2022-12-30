@@ -4,22 +4,42 @@
 }
 
 .chevron_left {
- transform: rotate(90deg);
- width: 15px;
- height: 15px;
- cursor: pointer;
- path {
-  fill: #cecedb;
- }
+  transform: rotate(90deg);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  path {
+    fill: map-get($notes, "icon");
+  }
 }
 .notes {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
   overflow-y: auto;
+  .edit_container {
+    .plus_icon {
+      cursor: pointer;
+      color: map-get($notes, "icon");
+      cursor: pointer;
+      font-size: 30px;
+      position: relative;
+      top: 1px;
+      font-weight: 500;
+      margin-left: 10px;
+      line-height: 1;
+    }
+  }
+
   &__header {
     margin-bottom: 20px;
     margin-bottom: 20px;
     top: 0;
     position: sticky;
-    background: #fff;
+    background: map-get($background_colors_light_theme, "primary");
   }
   &__row {
     border-radius: 10px;
@@ -44,10 +64,19 @@
     &__description {
       max-height: 100px;
     }
-    
+
     &__title {
       display: flex;
       margin-bottom: 5px;
+    }
+  }
+  &.dark {
+    .notes__header {
+      margin-bottom: 20px;
+      margin-bottom: 20px;
+      top: 0;
+      position: sticky;
+      background: map-get($background_colors_dark_theme, "primary");
     }
   }
 }

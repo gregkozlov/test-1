@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Button, Row, Text } from "../../../../shared";
+import { useTheme } from "../../../../shared/hooks";
 import { ChevronDown, Edit } from "../../../../shared/images";
 import styles from "./styles.module.scss";
 const Notes = () => {
+  const theme = useTheme();
   const [isEdit, setIsEdit] = useState(false);
   const hardcodedNotes = [
     {
@@ -49,7 +51,7 @@ const Notes = () => {
     }
   ];
   return (
-    <div className={styles.notes} style={{ height: `calc(100vh - 430px)` }}>
+    <div className={`${styles.notes} ${styles[theme]}`} style={{ height: `calc(100vh - 430px)` }}>
       <div className={styles.notes__header}>
         <Row>
           <Text bold size={"large"}>
@@ -58,7 +60,10 @@ const Notes = () => {
           {!isEdit ? (
             <Edit className={styles.edit} onClick={() => setIsEdit(true)} />
           ) : (
-            <ChevronDown className={styles.chevron_left} onClick={() => setIsEdit(false)} />
+            <div className={styles.edit_container}>
+              <ChevronDown className={styles.chevron_left} onClick={() => setIsEdit(false)} />
+              <a className={styles.plus_icon}>+</a>
+            </div>
           )}
         </Row>
       </div>
@@ -88,7 +93,6 @@ const Notes = () => {
               ) || <Text>Пока заметок нет</Text>
             );
           })}
-        {isEdit && <Button styletype={"secondary"}>+</Button>}
       </div>
     </div>
   );
