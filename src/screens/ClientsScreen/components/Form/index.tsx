@@ -52,7 +52,37 @@ const Form: React.FC = () => {
             </Row>
           </Col>
         </Row>
-        <Input
+        <Row>
+          <Col size={6} rightSpace={baseSpace / 2}>
+            <Input
+              placeholder={t("clients.form.placeholders.phoneNumber") as string}
+              name="phoneNumber"
+              type="tel"
+              label={t("clients.form.labels.phoneNumber") as string}
+            />
+            <Input
+              placeholder={t("clients.form.placeholders.dateOfBirth") as string}
+              name="dateOfBirth"
+              type="date"
+              label={t("clients.form.labels.dateOfBirth") as string}
+            />
+          </Col>
+          <Col size={6} leftSpace={baseSpace / 2}>
+            <Input
+              placeholder={t("clients.form.placeholders.email") as string}
+              name="email"
+              type="email"
+              label={t("clients.form.labels.email") as string}
+            />
+            <Input
+              placeholder={t("clients.form.placeholders.dateOfBirth") as string}
+              name="dateOfBirth"
+              type="date"
+              label={t("clients.form.labels.dateOfBirth") as string}
+            />
+          </Col>
+        </Row>
+        {/* <Input
           placeholder={t("clients.form.placeholders.phoneNumber") as string}
           name="phoneNumber"
           type="tel"
@@ -70,6 +100,12 @@ const Form: React.FC = () => {
           type="date"
           label={t("clients.form.labels.dateOfBirth") as string}
         />
+        <Input
+          placeholder={t("clients.form.placeholders.dateOfBirth") as string}
+          name="dateOfBirth"
+          type="date"
+          label={t("clients.form.labels.dateOfBirth") as string}
+        /> */}
         <div className={styles.button_container}>
           <Button styletype="primary" type="submit">
             {t("clients.buttons.create") as string}
