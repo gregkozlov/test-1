@@ -6,7 +6,7 @@ const Statistic = () => {
       <div className={styles.statistics_container}>
         <div>
           <div className={styles.employee_label}>
-            <Text color="#93939D">Сотрудник:</Text>
+            <Text color="#00000">Сотрудник:</Text>
             <Text bold size="large">
               Admin T.
             </Text>
@@ -20,7 +20,7 @@ const Statistic = () => {
         </div>
         <div className={styles.shift_container}>
           <div className={styles.shift_label}>
-            <Text>Смена открыта</Text>
+            <Text color="#">Смена открыта</Text>
           </div>
           <div className={styles.shift_item}>
             <Text color="#93939D">Наличных в кассе:</Text>

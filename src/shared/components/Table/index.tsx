@@ -18,7 +18,7 @@ const Table: React.FC<TableType> = ({ table, rowStyles, height, onRowClick = () 
   const theme = useTheme();
   return (
     <div className={styles.table}>
-      <div className={styles.table_container} style={{ maxHeight: height }} role="table" aria-label="Destinations">
+      <div className={styles.table_container} style={{ height: height }} role="table" aria-label="Destinations">
         <div className={`${styles.flex_table} ${styles.header} ${styles[theme]}`} role="rowgroup">
           {table.header.map((item) => {
             return (

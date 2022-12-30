@@ -1,0 +1,15 @@
+.modal_content {
+  max-width: 500px;
+  margin: 0 auto;
+
+  &__body{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    * {
+      margin-bottom: 5px;
+    }
+  
+
+  }
+}
