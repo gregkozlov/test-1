@@ -4,10 +4,10 @@ import DashboardTable from "./components/Table";
 import AdditionalInfo from "./components/AdditionalInfo";
 import Statistics from "./components/Statistics";
 import styles from "./dashboard.module.scss";
-import { PieChart } from "react-minimal-pie-chart";
 import InCashRegister from "./components/InCashRegister";
 import ClubLoad from "./components/ClubLoad";
 import Notes from "./components/Notes";
+import Chart from "./components/Charts";
 
 const DashboardScreen: React.FC = () => {
   const theme = useTheme();
@@ -24,30 +24,7 @@ const DashboardScreen: React.FC = () => {
             <Row customStyles={{ flex: 1 }}>
               <Col contentFullHeight size={7}>
                 <DashboardContainer>
-                  <div className={styles.chart_header}>
-                    <Text color="#93939D">Выручка</Text>
-                  </div>
-                  <div className={styles.chart}>
-                    <div className={styles.total}>
-                      <Text bold>15354₽</Text>
-                    </div>
-                    <PieChart
-                      lineWidth={35}
-                      // totalValue={2000}
-                      // label={({ dataEntry }) => `${Math.round(dataEntry.value)} ₽`}
-                      data={[
-                        { value: 1000, color: "#58F596" },
-                        { value: 600, color: "#4B47FF" }
-                      ]}
-                      style={{ height: 150, width: 150 }}
-                      labelStyle={{
-                        fontSize: "15px",
-                        fontFamily: "sans-serif",
-                        fill: "#E38627"
-                      }}
-                      labelPosition={0}
-                    />
-                  </div>
+                  <Chart />
                 </DashboardContainer>
               </Col>
               <Col contentFullHeight size={5} leftSpace={20}>

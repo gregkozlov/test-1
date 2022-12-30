@@ -13,3 +13,4 @@ export { ReactComponent as ChevronDown } from "./dropdown.svg";
 export { ReactComponent as Plus } from "./plus.svg";
 export { ReactComponent as ButtonArrow } from "./button_arrow.svg";
 export { ReactComponent as Edit } from "./edit.svg";
+export { ReactComponent as Star } from "./star.svg";

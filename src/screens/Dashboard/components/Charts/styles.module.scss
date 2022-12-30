@@ -1,0 +1,47 @@
+@import "/src/style/colors.scss";
+
+.chart {
+  position: relative;
+  max-width: max-content;
+  .total {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.chart_container {
+  display: flex;
+}
+.chart_container__right {
+  margin-left: 25px;
+  .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    &:nth-child(2){
+      .shift_label{
+        background-color: map-get($statistics, "hz")
+      }
+    }
+  }
+}
+.chart_header {
+  margin-bottom: 20px;
+}
+
+.shift_label {
+  border-radius: 5px;
+  padding: 3px 3px;
+  margin-right: 10px;
+  background-color: map-get($statistics, "success");
+}
+
+.resourse_item{
+  margin-right: 10px;
+  svg {
+    path {
+      fill: #93939d
+    }
+  }
+}

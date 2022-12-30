@@ -4,18 +4,4 @@
   &.dark {
     background-color: #1e1e1e;
   }
-  .chart {
-    position: relative;
-    max-width: max-content;
-    .total {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      
-    }
-  }
-  .chart_header {
-    margin-bottom: 20px;
-  }
 }

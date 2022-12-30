@@ -20,7 +20,7 @@ const Statistic = () => {
         </div>
         <div className={styles.shift_container}>
           <div className={styles.shift_label}>
-            <Text color="#">Смена открыта</Text>
+            <Text size={"small"}>Смена открыта</Text>
           </div>
           <div className={styles.shift_item}>
             <Text color="#93939D">Наличных в кассе:</Text>
