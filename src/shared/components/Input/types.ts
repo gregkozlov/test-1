@@ -2,7 +2,7 @@ import React from "react";
 
 export type InputProps = {
   size?: "small" | "medium" | "large";
-  type?: "text" | "password" | "email" | "tel";
+  type?: "text" | "password" | "email" | "tel" | "date";
   disabled?: boolean;
   placeholder?: string;
   errors?: string | null;

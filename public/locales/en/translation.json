@@ -49,7 +49,31 @@
   },
   "clients": {
     "buttons": {
-      "createClient": "Create client"
+      "createClient": "Create client",
+      "create": "Create",
+      "save": "Save"
+    },
+    "form": {
+      "labels": {
+        "login": "Login",
+        "password": "Password",
+        "name": "Name",
+        "surname": "Surname",
+        "phoneNumber": "Phone number",
+        "email": "Email",
+        "dateOfBirth": "Date of birth",
+        "role": "Role"
+      },
+      "placeholders": {
+        "login": "Enter user login",
+        "password": "Enter user password",
+        "name": "Enter user name",
+        "surname": "Enter user surname",
+        "phoneNumber": "Enter user phone number",
+        "email": "Enter user email",
+        "dateOfBirth": "Enter user date of birth",
+        "role": "Choose user role"
+      }
     }
   }
 }

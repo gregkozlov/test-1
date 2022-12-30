@@ -1,5 +1,5 @@
 import { DashboardContainer } from "../../shared";
-import { ClientsTable, Header } from "./components";
+import { ClientsTable, CreateUser, Header } from "./components";
 import styles from "./clients-screen.module.scss";
 import Modal from "../../shared/components/Modal";
 import { useState } from "react";
@@ -18,7 +18,7 @@ const ClientsScreen: React.FC = () => {
         <ClientsTable />
       </DashboardContainer>
       <Modal isOpened={isOpened} onBackdropClick={handleToggleModal}>
-        <DashboardContainer>some content</DashboardContainer>
+        <CreateUser />
       </Modal>
     </div>
   );
