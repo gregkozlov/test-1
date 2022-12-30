@@ -3,10 +3,9 @@ import useClientsTable from "../../useClientsTable";
 
 const ClientsTable: React.FC = () => {
   const table = useClientsTable();
-  // TODO: table height
   return (
     <Table
-      height={`calc(100vh - 100px)`}
+      height={`calc(100vh - 260px)`}
       table={table}
       rowStyles={{
         border: "1px solid $table-border",

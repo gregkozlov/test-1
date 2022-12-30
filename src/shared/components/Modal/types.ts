@@ -1,5 +1,5 @@
 export type ModalProps = {
   isOpened: boolean;
   onBackdropClick: () => void;
-  children: JSX.Element;
+  children: React.ReactNode;
 };
