@@ -39,7 +39,7 @@
 
     &.light {
       color: map-get($font_colors_light_theme, "primary");
-      border-color: map-get($font_colors_light_theme, "primary");
+      border-color: map-get($button_colors_dark_theme, "primary");
 
       &:hover {
         color: map-get($button_colors_light_theme, "primary");
@@ -49,7 +49,7 @@
 
     &.dark {
       color: map-get($font_colors_dark_theme, "primary");
-      border-color: map-get($font_colors_dark_theme, "primary");
+      border-color: map-get($button_colors_dark_theme, "primary");
 
       &:hover {
         color: map-get($button_colors_dark_theme, "primary");

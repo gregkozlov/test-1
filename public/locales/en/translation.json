@@ -4,7 +4,8 @@
   },
   "placeholders": {
     "login": "Enter your Login",
-    "password": "Enter your Password"
+    "password": "Enter your Password",
+    "search": "Search"
   },
   "labels": {
     "login": "Login",
@@ -30,6 +31,49 @@
       "marketplace": "Marketplace",
       "clients": "Clients",
       "logs": "Error Logs"
+    }
+  },
+  "tables": {
+    "clients": {
+      "header": {
+        "login": "Login",
+        "name": "Name",
+        "phoneNumber": "Phone Number",
+        "email": "Email",
+        "registratonDate": "Registration Date",
+        "lastVisit": "Last Visit",
+        "balance": "Balance",
+        "discount": "Discount"
+      }
+    }
+  },
+  "clients": {
+    "buttons": {
+      "createClient": "Create client",
+      "create": "Create",
+      "save": "Save"
+    },
+    "form": {
+      "labels": {
+        "login": "Login",
+        "password": "Password",
+        "name": "Name",
+        "surname": "Surname",
+        "phoneNumber": "Phone number",
+        "email": "Email",
+        "dateOfBirth": "Date of birth",
+        "role": "Role"
+      },
+      "placeholders": {
+        "login": "Enter user login",
+        "password": "Enter user password",
+        "name": "Enter user name",
+        "surname": "Enter user surname",
+        "phoneNumber": "Enter user phone number",
+        "email": "Enter user email",
+        "dateOfBirth": "Enter user date of birth",
+        "role": "Choose user role"
+      }
     }
   }
 }

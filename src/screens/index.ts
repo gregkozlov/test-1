@@ -13,3 +13,4 @@ export { default as EmployeesScreen } from "./Employees";
 export { default as ContentScreen } from "./Content";
 export { default as ReportsScreen } from "./Reports";
 export { default as SettingsScreen } from "./SettingsScreen";
+export { default as LoginScreen } from "./Login";
