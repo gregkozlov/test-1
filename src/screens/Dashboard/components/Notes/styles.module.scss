@@ -1,16 +1,34 @@
 @import "/src/style/colors.scss";
+.edit {
+  cursor: pointer;
+}
 
+.chevron_left {
+ transform: rotate(90deg);
+ width: 15px;
+ height: 15px;
+ cursor: pointer;
+ path {
+  fill: #cecedb;
+ }
+}
 .notes {
+  overflow-y: auto;
   &__header {
     margin-bottom: 20px;
+    margin-bottom: 20px;
+    top: 0;
+    position: sticky;
+    background: #fff;
   }
   &__row {
     border-radius: 10px;
     border: 1px solid map-get($notes, "primary");
     margin-bottom: 20px;
     padding: 10px;
-    .edit{
-      cursor: pointer;
+    .edit {
+      align-self: center;
+      height: 20px;
     }
     .circle {
       border-radius: 50%;
@@ -22,6 +40,11 @@
         background-color: map-get($notes, "primary");
       }
     }
+
+    &__description {
+      max-height: 100px;
+    }
+    
     &__title {
       display: flex;
       margin-bottom: 5px;

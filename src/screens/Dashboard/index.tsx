@@ -58,7 +58,8 @@ const DashboardScreen: React.FC = () => {
         </Row>
         <Row>
           <Col size={7} rightSpace={10} customStyles={{}}>
-            <DashboardContainer bottomSpace={0}>
+            <DashboardContainer>
+              {/* Client screen modal */}
               <DashboardTable />
             </DashboardContainer>
           </Col>
