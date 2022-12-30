@@ -1,0 +1,39 @@
+@import "/src/style/colors.scss";
+
+.in_cash_register {
+  display: flex;
+  flex-direction: column;
+  &__heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: #93939d;
+  }
+}
+
+.balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__value {
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #4b47ff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  &__arrow {
+    rotate: 270deg;
+    scale: 0.9;
+  }
+}
