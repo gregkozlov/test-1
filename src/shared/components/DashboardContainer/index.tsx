@@ -19,10 +19,10 @@ const DashboardCommonContainer: React.FC<DashboardContainerType> = ({
   return (
     <div
       style={{
-        paddingBottom: bottomSpace,
-        paddingTop: rightSpace,
-        paddingRight: topSpace,
-        paddingLeft: leftSpace
+        marginBottom: bottomSpace,
+        marginTop: topSpace,
+        marginRight: rightSpace,
+        marginLeft: leftSpace
       }}
       className={`${styles.dashboardContainer} ${styles[theme]}`}>
       {children}
