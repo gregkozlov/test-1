@@ -5,6 +5,7 @@ import { linkItemType } from "../../../../../constants/routes/types";
 
 import styles from "./styles.module.scss";
 import { useTheme } from "../../../../hooks";
+import { useTranslation } from "react-i18next";
 
 type NavigationItemType = {
   activeLink: string;
@@ -15,6 +16,7 @@ type NavigationItemType = {
 const NavigationItem: React.FC<NavigationItemType> = ({ link, setActiveLink, activeLink }) => {
   const [isDropdownActive, setIsDropdownActive] = useState(false);
   const theme = useTheme();
+  const { t } = useTranslation();
   const handleDropdownToggle = () => {
     setIsDropdownActive((prev: boolean) => !prev);
   };
@@ -36,7 +38,7 @@ const NavigationItem: React.FC<NavigationItemType> = ({ link, setActiveLink, act
             }
             key={link.title}>
             {link?.icon && <link.icon className={`${styles.link__icon}`} />}
-            {link.title}
+            {t(link.title)}
             <ChevronDown className={styles.link__chevron_down} />
           </NavLink>
         </div>
@@ -51,7 +53,7 @@ const NavigationItem: React.FC<NavigationItemType> = ({ link, setActiveLink, act
                   : `${styles.sub_link} ${styles[theme]}`;
               }}
               key={link.title}>
-              {link.title}
+              {t(link.title)}
             </NavLink>
           ))}
       </>
@@ -69,7 +71,7 @@ const NavigationItem: React.FC<NavigationItemType> = ({ link, setActiveLink, act
           setActiveLink(link.title);
         }}
         key={link.title}>
-        {link.title}
+        {t(link.title)}
         {link?.icon && <link.icon className={styles.link__icon} />}
       </NavLink>
     </div>

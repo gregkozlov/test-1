@@ -6,6 +6,7 @@ const ClientsTable: React.FC = () => {
   // TODO: table height
   return (
     <Table
+      height={`calc(100vh - 100px)`}
       table={table}
       rowStyles={{
         border: "1px solid $table-border",

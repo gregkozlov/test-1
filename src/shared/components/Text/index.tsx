@@ -16,8 +16,8 @@ const Text: React.FC<TextProps> = ({
       onClick={onClick}
       className={`${styles[theme]} ${styles[size]} ${bold && styles.bold}`}
       style={{
-        color,
-        textAlign: align
+        textAlign: align,
+        ...((theme == "light" && { color: color }) || { color: "#fff" })
       }}>
       {children}
     </p>

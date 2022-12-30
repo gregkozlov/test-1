@@ -24,6 +24,15 @@
     "invalidPhone": "Invalid phone number",
     "invalidLogin": "Symbols are not allowed"
   },
+  "navigation": {
+    "pages": {
+      "dashboard": "Dashboard",
+      "computers": "Computers",
+      "marketplace": "Marketplace",
+      "clients": "Clients",
+      "logs": "Error Logs"
+    }
+  },
   "tables": {
     "clients": {
       "header": {

@@ -1,0 +1,43 @@
+@import "/src/style/colors.scss";
+
+.statistics_container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid map-get($table, "border");
+  &__employee_container {
+    display: flex;
+  }
+}
+
+.statistics_footer, .employee_label {
+  display: flex;
+  &>:first-child{
+    margin-right: 20px;
+  }
+}
+
+.statistics_footer {
+  margin-top: 15px;
+}
+
+.employee_label {
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.profit_label {
+  margin-bottom: 40px;
+}
+
+.shift_container {
+  .shift_label {
+    border-radius: 5px;
+    padding: 3px 5px;
+    margin-bottom: 20px;
+    background-color: map-get($statistics, "success");
+  }
+
+  .shift_item {
+    margin-bottom: 5px;
+  }
+}

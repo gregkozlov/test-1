@@ -5,7 +5,7 @@ import { ChevronDown } from "../../images";
 
 import styles from "./styles.module.scss";
 
-const Table: React.FC<TableType> = ({ table, rowStyles }) => {
+const Table: React.FC<TableType> = ({ table, rowStyles, height, onRowClick = () => null }) => {
   const [rowWidth, setRowWidth] = useState(`calc(100% / 6`);
   const createFlexRowGridStyle = (count: number) => {
     return `calc(100% / ${count})`;
@@ -17,7 +17,7 @@ const Table: React.FC<TableType> = ({ table, rowStyles }) => {
 
   const theme = useTheme();
   return (
-    <div className={styles.table}>
+    <div className={styles.table} style={{ maxHeight: height }}>
       <div className={styles.table_container} role="table" aria-label="Destinations">
         <div className={`${styles.flex_table} ${styles.header} ${styles[theme]}`} role="rowgroup">
           {table.header.map((item) => {
@@ -38,7 +38,12 @@ const Table: React.FC<TableType> = ({ table, rowStyles }) => {
         </div>
         {table.body.map((bodyRow, i) => (
           // todo
-          <div key={i} className={`${styles.flex_table} ${styles.row}`} style={{ ...rowStyles }} role="rowgroup">
+          <div
+            key={i}
+            className={`${styles.flex_table} ${styles.row}`}
+            onClick={onRowClick}
+            style={{ ...rowStyles }}
+            role="rowgroup">
             {bodyRow.map((bodyRowItem, i) => (
               <div
                 // todo

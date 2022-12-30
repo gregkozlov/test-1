@@ -4,7 +4,7 @@ import { useTheme } from "../../hooks";
 
 import styles from "./styles.module.scss";
 
-const Toggle: React.FC<ToggleType> = ({ label, toggled, onClick }) => {
+const Toggle: React.FC<ToggleType> = ({ label, toggled, onClick, rightPlaceholeder, leftPlaceholder }) => {
   const [isToggled, toggle] = useState(toggled);
   const theme = useTheme();
 
@@ -17,8 +17,8 @@ const Toggle: React.FC<ToggleType> = ({ label, toggled, onClick }) => {
     <label className={`${styles.toggle} ${styles[theme]}`}>
       <input type="checkbox" defaultChecked={isToggled} onClick={callback} />
       <span>
-        <Moon />
-        <Sun />
+        {rightPlaceholeder}
+        {leftPlaceholder}
       </span>
       <strong>{label}</strong>
     </label>

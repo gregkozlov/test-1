@@ -7,6 +7,10 @@ import { useTheme } from "../../hooks";
 
 import { switchTheme } from "../../../appSlices";
 import { useDispatch } from "react-redux";
+import { Sun, Moon } from "../ToggleButton/images";
+import Text from "../Text";
+import { useTranslation } from "react-i18next";
+
 type DropdownType = {
   options?: {
     content: React.ReactNode;
@@ -14,6 +18,8 @@ type DropdownType = {
 };
 
 const Dropdown: React.FC<DropdownType> = () => {
+  const { i18n } = useTranslation();
+
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const theme = useTheme();
@@ -21,6 +27,12 @@ const Dropdown: React.FC<DropdownType> = () => {
   const handleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const changeLanguage = () => {
+    const { language, changeLanguage } = i18n;
+    language === "ru" ? changeLanguage("en") : changeLanguage("ru");
+  };
+
   return (
     <div className={`${styles.dropdown} ${styles[theme]}`}>
       <Button onClick={handleDropdown}>Admin T.</Button>
@@ -33,6 +45,24 @@ const Dropdown: React.FC<DropdownType> = () => {
               onClick={() => {
                 dispatch(switchTheme());
               }}
+              leftPlaceholder={<Sun />}
+              rightPlaceholeder={<Moon />}
+            />
+          </div>
+          <div className={styles.dropdown__item}>
+            <Toggle
+              toggled={true}
+              onClick={changeLanguage}
+              leftPlaceholder={
+                <Text bold size="small" color="#4b47ff">
+                  РУ
+                </Text>
+              }
+              rightPlaceholeder={
+                <Text size="small" color="#4b47ff" bold>
+                  EN
+                </Text>
+              }
             />
           </div>
         </div>

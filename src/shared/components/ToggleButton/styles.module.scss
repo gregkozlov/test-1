@@ -26,8 +26,12 @@
     height: 30px;
     width: 50px;
     display: flex;
-    svg {
-      padding: 3px;
+    &>* {
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
     }
   }
   span:before {

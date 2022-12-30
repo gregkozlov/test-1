@@ -1,7 +1,11 @@
 import { DashboardContainer, Grid, Row, Col, Text } from "../../shared";
 import { useTheme } from "../../shared/hooks";
-import DashBoardTable from "./components/Table";
+import DashboardTable from "./components/Table";
+import AdditionalInfo from "./components/AdditionalInfo";
+import Statistics from "./components/Statistics";
 import styles from "./dashboard.module.scss";
+import { PieChart } from "react-minimal-pie-chart";
+import Notes from "./components/Notes";
 
 const DashboardScreen: React.FC = () => {
   const theme = useTheme();
@@ -11,30 +15,42 @@ const DashboardScreen: React.FC = () => {
         <Row bottomSpace={20}>
           <Col size={7} rightSpace={10}>
             <DashboardContainer>
-              <Text color="#93939D">Выручка:</Text>
-              <Text bold size="extra-large">
-                0 ₽
-              </Text>
-              <Text bold size="large">
-                Admin T.
-              </Text>
+              <Statistics />
             </DashboardContainer>
           </Col>
           <Col size={5} leftSpace={10}>
             <Row customStyles={{ flex: 1 }}>
-              <Col contentFullHeight size={4}>
+              <Col contentFullHeight size={7}>
                 <DashboardContainer>
-                  <>Наличные</>
+                  <div className={styles.chart_header}>
+                    <Text color="#93939D">Выручка</Text>
+                  </div>
+                  <div className={styles.chart}>
+                    <div className={styles.total}>
+                      <Text bold>15354₽</Text>
+                    </div>
+                    <PieChart
+                      lineWidth={35}
+                      // totalValue={2000}
+                      // label={({ dataEntry }) => `${Math.round(dataEntry.value)} ₽`}
+                      data={[
+                        { value: 1000, color: "#58F596" },
+                        { value: 600, color: "#4B47FF" }
+                      ]}
+                      style={{ height: 150, width: 150 }}
+                      labelStyle={{
+                        fontSize: "15px",
+                        fontFamily: "sans-serif",
+                        fill: "#E38627"
+                      }}
+                      labelPosition={0}
+                    />
+                  </div>
                 </DashboardContainer>
               </Col>
-              <Col contentFullHeight size={4} leftSpace={20} rightSpace={20}>
+              <Col contentFullHeight size={5} leftSpace={20}>
                 <DashboardContainer>
-                  <>Безналичные</>
-                </DashboardContainer>
-              </Col>
-              <Col contentFullHeight size={4}>
-                <DashboardContainer>
-                  <>Загрузка клуба</>
+                  <AdditionalInfo />
                 </DashboardContainer>
               </Col>
             </Row>
@@ -42,13 +58,13 @@ const DashboardScreen: React.FC = () => {
         </Row>
         <Row>
           <Col size={7} rightSpace={10} customStyles={{}}>
-            <DashboardContainer>
-              <DashBoardTable />
+            <DashboardContainer bottomSpace={0}>
+              <DashboardTable />
             </DashboardContainer>
           </Col>
           <Col size={5} leftSpace={10} contentFullHeight>
             <DashboardContainer>
-              <>Выручка</>
+              <Notes />
             </DashboardContainer>
           </Col>
         </Row>

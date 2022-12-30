@@ -11,6 +11,7 @@ import Dropdown from "../Dropdown";
 import Button from "../Button";
 import Text from "../Text";
 import { useTheme } from "../../hooks";
+import { t } from "i18next";
 
 const Header: React.FC = () => {
   const pageTitle = useSelector<RootState>((state) => state.rootReducer.layoutSliceReducer.title) as string;
@@ -25,7 +26,7 @@ const Header: React.FC = () => {
             </div>
           </Col>
           <Col size={4}>
-            <h3 className={styles.header__title}>{pageTitle}</h3>
+            <h3 className={styles.header__title}>{t(pageTitle)}</h3>
           </Col>
           <Col size={6}>
             <Row>

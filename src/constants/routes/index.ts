@@ -30,61 +30,63 @@ import {
   Settings
 } from "../../shared/images";
 
+import { useTranslation } from "react-i18next";
+
 import { linkItemType } from "./types";
 
 export const LINKS_TOP: linkItemType[] = [
   {
     url: "/",
-    title: "Dashboard",
+    title: "navigation.pages.dashboard",
     component: DashboardScreen,
     icon: Dashboard
   },
   {
     url: "/computers/spacemap",
-    title: "Computers",
+    title: "navigation.pages.computers",
     component: ComputersScreen,
     icon: Computer,
     dropdown: [
       {
         // naming!!
         url: "/computers/spacemap",
-        title: "Space map",
+        title: "navigation.pages.spaceMap",
         component: SpaceMapScreen
       },
       {
         url: "/computers/computerlist",
-        title: "Profile",
+        title: "navigation.pages.profile",
         component: ComputerListScreen
       }
     ]
   },
   {
     url: "/marketplace/products",
-    title: "Marketplace",
+    title: "navigation.pages.marketplace",
     component: MarketplaceScreen,
     icon: Store,
     dropdown: [
       {
         url: "/marketplace/products",
-        title: "Products",
+        title: "navigation.pages.products",
         component: ProductsScreen
       },
       {
         url: "/marketplace/service",
-        title: "Service",
+        title: "navigation.pages.service",
         component: ServiceScreen
       }
     ]
   },
   {
     url: "/clients",
-    title: "Clients",
+    title: "navigation.pages.clients",
     icon: Clients,
     component: ClientsScreen
   },
   {
     url: "/errorlog",
-    title: "Error Log",
+    title: "navigation.pages.logs",
     component: ErrorLogs,
     icon: Logs
   }
