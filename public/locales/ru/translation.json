@@ -34,10 +34,27 @@
       "spaceMap": "Карта клуба",
       "profile": "Профиль",
       "products": "Товары",
-      "service": "Услуги"
+      "service": "Услуги",
+      "taxes": "Тарифы",
+      "loyalty": "Система лояльности",
+      "employees": "Сотрудники",
+      "content": "Контент",
+      "reports": "Отчеты",
+      "settings": "Настройка"
     }
   },
   "tables": {
+    "dashboard": {
+      "time": "ВРЕМЯ",
+      "ckeck": "НОМЕР ЧЕКА",
+      "user": "ИМЯ ПОЛЬЗОВАТЕЛЬЯ",
+      "description": "ОПИСАНИЕ",
+      "type": "ТИП",
+      "amount": "СУММА",
+      "statusPaid": "Оплачено",
+      "statusReturned": "Возврат",
+      "chashPayment": "Наличные"
+    },
     "clients": {
       "header": {
         "login": "Логин",
@@ -50,6 +67,27 @@
         "discount": "Скидка"
       }
     }
+  },
+  "dashboard": {
+    "x-report": "X-ОТЧЕТ",
+    "z-report": "Z-ОТЧЕТ",
+    "replenishments": "Пополнения",
+    "notes": "Заметки",
+
+    "cashInHand": "Наличных в кассе:",
+    "atTheBeginningOfShift": "На начало смены:",
+    "revenue": "Выручка",
+    "staff": "Сотрудник:",
+    "beginningOfShift": "Начало смены:",
+    "shiftOpen": "Смена открыта",
+    "cash": "Наличные",
+    "card": "Безналичные",
+
+    "save": "Сохранить",
+    "cancel": "Отменить",
+    "delete": "Удалить",
+    "note": "Заметка",
+    "title": "Заголовок"
   },
   "clients": {
     "buttons": {

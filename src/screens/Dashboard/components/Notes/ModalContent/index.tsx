@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import { useState } from "react";
 import { Button, DashboardContainer, Input } from "../../../../../shared";
 import { useTheme } from "../../../../../shared/hooks";
@@ -25,14 +26,14 @@ const NotesModalContent = ({
           <Input
             type="text"
             value={user}
-            placeholder={"Title"}
+            placeholder={t("dashboard.title") as string}
             onChange={(e) => {
               setUser(e.target.value);
             }}
           />
           <Input
             type="text"
-            placeholder={"Note"}
+            placeholder={t("dashboard.note") as string}
             value={message}
             onChange={(e) => {
               setMessage(e.target.value);
@@ -48,15 +49,15 @@ const NotesModalContent = ({
               };
               onSave(isNew, note);
             }}>
-            Save
+            {t("dashboard.save") as string}
           </Button>
           <Button styletype={"secondary"} onClick={onCancel}>
-            Cancel
+            {t("dashboard.cancel") as string}
           </Button>
 
           {!isNew && (
             <Button styletype={"secondary"} border={false} onClick={() => onDelete && onDelete(currentNote.id)}>
-              Delete
+              {t("dashboard.delete") as string}
             </Button>
           )}
         </div>

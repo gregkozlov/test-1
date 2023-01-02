@@ -1,4 +1,4 @@
-import { DashboardContainer, Grid, Row, Col, Text } from "../../shared";
+import { DashboardContainer, Grid, Row, Col, Text, Button } from "../../shared";
 import { useTheme } from "../../shared/hooks";
 import DashboardTable from "./components/Table";
 import AdditionalInfo from "./components/AdditionalInfo";
@@ -8,6 +8,7 @@ import InCashRegister from "./components/InCashRegister";
 import ClubLoad from "./components/ClubLoad";
 import Notes from "./components/Notes";
 import Chart from "./components/Charts";
+import { t } from "i18next";
 
 const DashboardScreen: React.FC = () => {
   const theme = useTheme();

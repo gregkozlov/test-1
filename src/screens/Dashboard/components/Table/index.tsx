@@ -1,35 +1,37 @@
 import { Printer, Recoveryconvert, Repeat } from "../../images";
-import { Text, Table } from "../../../../shared/";
+import { Text, Table, Button, Row } from "../../../../shared/";
 import styles from "./styles.module.scss";
 import { useTheme } from "../../../../shared/hooks";
+import { useTranslation } from "react-i18next";
 
 const DashBoardTable = () => {
   const theme = useTheme();
+  const { t } = useTranslation();
   const table = {
     header: [
       {
-        title: "ВРЕМЯ",
-        rightIcon: true
-      },
-      {
-        title: "НОМЕР ЧЕКА",
+        title: t("tables.dashboard.time"),
         rightIcon: false
       },
       {
-        title: "ИМЯ ПОЛЬЗОВАТЕЛЯ",
+        title: t("tables.dashboard.ckeck"),
         rightIcon: false
       },
       {
-        title: "ОПИСАНИЕ",
+        title: t("tables.dashboard.user"),
         rightIcon: false
       },
       {
-        title: "ТИП",
-        rightIcon: true
+        title: t("tables.dashboard.description"),
+        rightIcon: false
       },
       {
-        title: "СУММА",
-        rightIcon: true
+        title: t("tables.dashboard.type"),
+        rightIcon: false
+      },
+      {
+        title: t("tables.dashboard.amount"),
+        rightIcon: false
       },
       {
         title: "",
@@ -62,14 +64,14 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"} color={"#58F596"}>
-              Оплачено
+              {t("tables.dashboard.statusPaid") as string}
             </Text>
           )
         },
         {
           content: (
             <Text align="center" size={"medium"}>
-              Наличные
+              {t("tables.dashboard.chashPayment") as string}
             </Text>
           )
         },
@@ -115,14 +117,14 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"} color={"#58F596"}>
-              Оплачено
+              {t("tables.dashboard.statusPaid") as string}
             </Text>
           )
         },
         {
           content: (
             <Text align="center" size={"medium"}>
-              Наличные
+              {t("tables.dashboard.chashPayment") as string}
             </Text>
           )
         },
@@ -168,14 +170,14 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"} color={"#58F596"}>
-              Оплачено
+              {t("tables.dashboard.statusPaid") as string}
             </Text>
           )
         },
         {
           content: (
             <Text align="center" size={"medium"}>
-              Наличные
+              {t("tables.dashboard.chashPayment") as string}
             </Text>
           )
         },
@@ -221,14 +223,14 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"} color={"#58F596"}>
-              Оплачено
+              {t("tables.dashboard.statusPaid") as string}
             </Text>
           )
         },
         {
           content: (
             <Text align="center" size={"medium"}>
-              Наличные
+              {t("tables.dashboard.chashPayment") as string}
             </Text>
           )
         },
@@ -274,14 +276,14 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"} color={"#58F596"}>
-              Оплачено
+              {t("tables.dashboard.statusPaid") as string}
             </Text>
           )
         },
         {
           content: (
             <Text align="center" size={"medium"}>
-              Наличные
+              {t("tables.dashboard.chashPayment") as string}
             </Text>
           )
         },
@@ -327,14 +329,14 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"} color={"#F5847D"}>
-              Возврат
+              {t("tables.dashboard.statusReturned") as string}
             </Text>
           )
         },
         {
           content: (
             <Text align="center" size={"medium"}>
-              Наличные
+              {t("tables.dashboard.chashPayment") as string}
             </Text>
           )
         },
@@ -380,14 +382,14 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"} color={"#F5847D"}>
-              Возврат
+              {t("tables.dashboard.statusReturned") as string}
             </Text>
           )
         },
         {
           content: (
             <Text align="center" size={"medium"}>
-              Наличные
+              {t("tables.dashboard.chashPayment") as string}
             </Text>
           )
         },
@@ -433,14 +435,14 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"} color={"#58F596"}>
-              Оплачено
+              {t("tables.dashboard.statusPaid") as string}
             </Text>
           )
         },
         {
           content: (
             <Text align="center" size={"medium"}>
-              Наличные
+              {t("tables.dashboard.chashPayment") as string}
             </Text>
           )
         },
@@ -463,17 +465,48 @@ const DashBoardTable = () => {
       ]
     ]
   };
+
+  const printImg = (url: string) => {
+    const win = window.open("");
+    if (win) {
+      win.document.write('<img src="' + url + '" onload="window.print();window.close()" />');
+      win.focus();
+    }
+  };
+
   return (
-    <Table
-      height={`calc(100vh - 430px)`}
-      table={table}
-      rowStyles={{
-        border: "1px solid $table-border",
-        marginBottom: 10,
-        borderRadius: 10,
-        boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.25)"
-      }}
-    />
+    <>
+      <Row leftSpace={10}>
+        <Text bold size={"large"}>
+          {t("dashboard.replenishments") as string}
+        </Text>
+        <div className={styles.table_header_buttons_container}>
+          <Button
+            styletype={"secondary"}
+            onClick={() => {
+              printImg("https://spb-kassa.ru/images/wab-08rk/wab-08rk-x-%D0%BE%D1%82%D1%87%D0%B5%D1%82.jpg");
+            }}>
+            <Text size="small">{t("dashboard.z-report") as string}</Text>
+          </Button>
+          <Button
+            onClick={() => {
+              printImg("https://spb-kassa.ru/images/wab-08rk/wab-08rk-x-%D0%BE%D1%82%D1%87%D0%B5%D1%82.jpg");
+            }}>
+            <Text size="small">{t("dashboard.x-report") as string}</Text>
+          </Button>
+        </div>
+      </Row>
+      <Table
+        height={`calc(100vh - 430px)`}
+        table={table}
+        rowStyles={{
+          border: "1px solid $table-border",
+          marginBottom: 10,
+          borderRadius: 10,
+          boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.25)"
+        }}
+      />
+    </>
   );
 };
 

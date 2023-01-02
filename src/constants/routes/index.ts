@@ -95,37 +95,37 @@ export const LINKS_TOP: linkItemType[] = [
 export const LINKS_BOTTOM: linkItemType[] = [
   {
     url: "/taxes",
-    title: "Taxes",
+    title: "navigation.pages.taxes",
     icon: Percent,
     component: TaxesScreen
   },
   {
     url: "/loyalty",
-    title: "Loyalty system",
+    title: "navigation.pages.loyalty",
     icon: Loyalty,
     component: LoyaltyScreen
   },
   {
     url: "/employees",
-    title: "Employees",
+    title: "navigation.pages.employees",
     icon: People,
     component: EmployeesScreen
   },
   {
     url: "/content",
-    title: "Content",
+    title: "navigation.pages.content",
     icon: Book,
     component: ContentScreen
   },
   {
     url: "/reports",
-    title: "Reports",
+    title: "navigation.pages.reports",
     icon: Cloud,
     component: ReportsScreen
   },
   {
     url: "/settings",
-    title: "Settings",
+    title: "navigation.pages.settings",
     icon: Settings,
     component: SettingsScreen
   }

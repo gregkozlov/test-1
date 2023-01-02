@@ -5,6 +5,7 @@ import { ChevronDown, Edit } from "../../../../shared/images";
 import Modal from "../../../../shared/components/Modal";
 import styles from "./styles.module.scss";
 import NotesModalContent from "./ModalContent";
+import { t } from "i18next";
 
 const Notes = () => {
   const hardcodedNotes = [
@@ -131,7 +132,7 @@ const Notes = () => {
       <div className={styles.notes__header}>
         <Row>
           <Text bold size={"large"}>
-            Заметки
+            {t("dashboard.notes") as string}
           </Text>
           {!isEdit ? (
             <Edit className={styles.edit} onClick={() => setIsEdit(true)} />
@@ -171,11 +172,12 @@ const Notes = () => {
                     </div>
                     <Text size={"small"}>{note}</Text>
                   </div>
-                  {isEdit ? (
-                    <Edit className={styles.edit} onClick={() => handleModalOpen(false, currentNote)} />
-                  ) : (
-                    <div className={`${styles.circle} ${checked && styles.checked}`}></div>
-                  )}
+                  {
+                    isEdit && <Edit className={styles.edit} onClick={() => handleModalOpen(false, currentNote)} />
+                    //  : (
+                    //   <div className={`${styles.circle} ${checked && styles.checked}`}></div>
+                    // )
+                  }
                 </Row>
               </div>
             );

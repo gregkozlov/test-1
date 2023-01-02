@@ -30,10 +30,32 @@
       "computers": "Computers",
       "marketplace": "Marketplace",
       "clients": "Clients",
-      "logs": "Error Logs"
+      "logs": "Error Logs",
+      "spaceMap": "Space Map",
+      "profile": "Profile",
+      "products": "Products",
+      "service": "Service",
+      "taxes": "Taxes",
+      "loyalty": "Loyalty System",
+      "employees": "Employees",
+      "content": "Content",
+      "reports": "Reports",
+      "settings": "Settings"
     }
   },
   "tables": {
+    "dashboard": {
+      "time": "TIME",
+      "ckeck": "CHECK NUMBER",
+      "user": "USER NAME",
+      "description": "DESCRIPTION",
+      "type": "TYPE",
+      "amount": "AMOUNT",
+      "statusPaid": "Paid",
+      "statusReturned": "Returned",
+      "replenishments": "Replenishments",
+      "chashPayment": "Cash"
+    },
     "clients": {
       "header": {
         "login": "Login",
@@ -46,6 +68,25 @@
         "discount": "Discount"
       }
     }
+  },
+  "dashboard": {
+    "x-report": "X-REPORT",
+    "z-report": "Z-REPORT",
+    "replenishments": "Replenishments",
+    "notes": "Notes",
+    "cashInHand": "Сash in hand:",
+    "atTheBeginningOfShift": "At the beginning of the shift:",
+    "revenue": "Revenue",
+    "staff": "Employee:",
+    "beginningOfShift": "Beginning of the shift:",
+    "shiftOpen": "Shift is open",
+    "cash": "Cash",
+    "card": "Card",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "note": "Note",
+    "title": "Title"
   },
   "clients": {
     "buttons": {

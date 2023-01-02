@@ -2,6 +2,18 @@
   margin: 0px 15px;
 }
 
+.table_header_buttons_container{
+  width: 200px;
+  display: flex;
+  margin-bottom: 20px;
+  button {
+    flex: 1;
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
+}
+
 .flex_nowrap {
   display: flex;
   flex-wrap: nowrap;

@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import { PieChart } from "react-minimal-pie-chart";
 
 import { Row, Text } from "../../../../shared";
@@ -9,7 +10,7 @@ const Chart = () => {
     <div className={styles.chart_container}>
       <div className={styles.chart_container__left}>
         <div className={styles.chart_header}>
-          <Text color="#93939D">Выручка</Text>
+          <Text color="#93939D">{t("dashboard.revenue") as string}</Text>
         </div>
         {/* <Row> */}
         {/* <Col size={7}> */}
@@ -39,7 +40,7 @@ const Chart = () => {
         <div className={styles.row}>
           <div className={styles.shift_label}>
             <Text size={"small"} color="#000">
-              Наличные:
+              {t("dashboard.cash") as string}
             </Text>
           </div>
           <Text>15354₽</Text>
@@ -47,7 +48,7 @@ const Chart = () => {
         <div className={styles.row}>
           <div className={styles.shift_label}>
             <Text size={"small"} color="#fff">
-              Безналичные:
+              {t("dashboard.card") as string}
             </Text>
           </div>
           <Text>15354₽</Text>
