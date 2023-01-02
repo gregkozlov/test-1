@@ -80,5 +80,8 @@
       position: sticky;
       background: map-get($background_colors_dark_theme, "primary");
     }
+    .notes__row {
+      border: 1px solid map-get($font_colors_light_theme, "button_primary");
+    }
   }
 }
