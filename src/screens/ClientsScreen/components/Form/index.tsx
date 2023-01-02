@@ -1,19 +1,27 @@
 import { Formik } from "formik";
 import { useTranslation } from "react-i18next";
 import { Button, Col, DashboardContainer, Grid, Input, Row } from "../../../../shared";
+import { Avatar } from "../../../../shared/images";
+import Select from "./Select";
 import styles from "./user_form.module.scss";
 
 const Form: React.FC = () => {
   const { t } = useTranslation();
-
+  const roles = [t("clients.form.role.client"), t("clients.form.role.operator")];
+  const gender = [t("clients.form.gender.male"), t("clients.form.gender.female")];
   const baseSpace = 20;
 
   return (
     <DashboardContainer>
       <Grid>
         <Row>
-          <Col size={2}>content</Col>
-          <Col size={10}>
+          <Col size={3}>
+            <Avatar className={styles.avatar} />
+            <Row>
+              <Select options={gender} placeholder={t("clients.form.placeholders.gender") as string} />
+            </Row>
+          </Col>
+          <Col size={9}>
             <Row>
               <Col size={6} leftSpace={baseSpace}>
                 <Input
@@ -74,12 +82,17 @@ const Form: React.FC = () => {
               type="email"
               label={t("clients.form.labels.email") as string}
             />
-            <Input
+            <Select
+              options={roles}
+              placeholder={t("clients.form.placeholders.role") as string}
+              label={t("clients.form.labels.role") as string}
+            />
+            {/* <Input
               placeholder={t("clients.form.placeholders.dateOfBirth") as string}
               name="dateOfBirth"
               type="date"
               label={t("clients.form.labels.dateOfBirth") as string}
-            />
+            /> */}
           </Col>
         </Row>
         {/* <Input
