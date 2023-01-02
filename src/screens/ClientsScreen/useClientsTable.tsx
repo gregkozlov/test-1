@@ -23,7 +23,7 @@ const useClientsTable = () => {
         rightIcon: true
       },
       {
-        title: t("tables.clients.header.registratonDate"),
+        title: t("tables.clients.header.registrationDate"),
         rightIcon: true
       },
       {

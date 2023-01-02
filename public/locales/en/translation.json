@@ -46,7 +46,7 @@
   "tables": {
     "dashboard": {
       "time": "TIME",
-      "ckeck": "CHECK NUMBER",
+      "check": "CHECK NUMBER",
       "user": "USER NAME",
       "description": "DESCRIPTION",
       "type": "TYPE",
@@ -54,7 +54,7 @@
       "statusPaid": "Paid",
       "statusReturned": "Returned",
       "replenishments": "Replenishments",
-      "chashPayment": "Cash"
+      "cashPayment": "Cash"
     },
     "clients": {
       "header": {
@@ -62,7 +62,7 @@
         "name": "Name",
         "phoneNumber": "Phone Number",
         "email": "Email",
-        "registratonDate": "Registration Date",
+        "registrationDate": "Registration Date",
         "lastVisit": "Last Visit",
         "balance": "Balance",
         "discount": "Discount"
@@ -74,7 +74,7 @@
     "z-report": "Z-REPORT",
     "replenishments": "Replenishments",
     "notes": "Notes",
-    "cashInHand": "Сash in hand:",
+    "cashInHand": "Cash in hand:",
     "atTheBeginningOfShift": "At the beginning of the shift:",
     "revenue": "Revenue",
     "staff": "Employee:",

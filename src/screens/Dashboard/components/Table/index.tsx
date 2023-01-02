@@ -14,7 +14,7 @@ const DashBoardTable = () => {
         rightIcon: false
       },
       {
-        title: t("tables.dashboard.ckeck"),
+        title: t("tables.dashboard.check"),
         rightIcon: false
       },
       {
@@ -71,7 +71,7 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"}>
-              {t("tables.dashboard.chashPayment") as string}
+              {t("tables.dashboard.cashPayment") as string}
             </Text>
           )
         },
@@ -124,7 +124,7 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"}>
-              {t("tables.dashboard.chashPayment") as string}
+              {t("tables.dashboard.cashPayment") as string}
             </Text>
           )
         },
@@ -177,7 +177,7 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"}>
-              {t("tables.dashboard.chashPayment") as string}
+              {t("tables.dashboard.cashPayment") as string}
             </Text>
           )
         },
@@ -230,7 +230,7 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"}>
-              {t("tables.dashboard.chashPayment") as string}
+              {t("tables.dashboard.cashPayment") as string}
             </Text>
           )
         },
@@ -283,7 +283,7 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"}>
-              {t("tables.dashboard.chashPayment") as string}
+              {t("tables.dashboard.cashPayment") as string}
             </Text>
           )
         },
@@ -336,7 +336,7 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"}>
-              {t("tables.dashboard.chashPayment") as string}
+              {t("tables.dashboard.cashPayment") as string}
             </Text>
           )
         },
@@ -389,7 +389,7 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"}>
-              {t("tables.dashboard.chashPayment") as string}
+              {t("tables.dashboard.cashPayment") as string}
             </Text>
           )
         },
@@ -442,7 +442,7 @@ const DashBoardTable = () => {
         {
           content: (
             <Text align="center" size={"medium"}>
-              {t("tables.dashboard.chashPayment") as string}
+              {t("tables.dashboard.cashPayment") as string}
             </Text>
           )
         },

@@ -46,14 +46,14 @@
   "tables": {
     "dashboard": {
       "time": "ВРЕМЯ",
-      "ckeck": "НОМЕР ЧЕКА",
+      "check": "НОМЕР ЧЕКА",
       "user": "ИМЯ ПОЛЬЗОВАТЕЛЬЯ",
       "description": "ОПИСАНИЕ",
       "type": "ТИП",
       "amount": "СУММА",
       "statusPaid": "Оплачено",
       "statusReturned": "Возврат",
-      "chashPayment": "Наличные"
+      "cashPayment": "Наличные"
     },
     "clients": {
       "header": {
@@ -61,7 +61,7 @@
         "name": "Имя",
         "phoneNumber": "Номер Телефона",
         "email": "Почта",
-        "registratonDate": "Дата Регистрации",
+        "registrationDate": "Дата Регистрации",
         "lastVisit": "Последний визит",
         "balance": "Баланс",
         "discount": "Скидка"
@@ -93,7 +93,7 @@
     "buttons": {
       "createClient": "Создать клиента",
       "create": "Создать",
-      "save": "Созранить"
+      "save": "Сохранить"
     },
     "form": {
       "labels": {
