@@ -142,7 +142,8 @@
         "phoneNumber": "Phone number",
         "email": "Email",
         "dateOfBirth": "Date of birth",
-        "role": "Role"
+        "role": "Role",
+        "gender": "Gender"
       },
       "placeholders": {
         "login": "Enter user login",
@@ -152,7 +153,16 @@
         "phoneNumber": "Enter user phone number",
         "email": "Enter user email",
         "dateOfBirth": "Enter user date of birth",
-        "role": "Choose user role"
+        "role": "Choose user role",
+        "gender": "Choose gender"
+      },
+      "gender": {
+        "male": "Male",
+        "female": "Female"
+      },
+      "role": {
+        "client": "Client",
+        "operator": "Operator"
       }
     }
   }

@@ -17,7 +17,7 @@ const ClientsScreen: React.FC = () => {
         <Header handleToggleModal={handleToggleModal} />
         <ClientsTable />
       </DashboardContainer>
-      <Modal isOpened={isOpened} onBackdropClick={handleToggleModal}>
+      <Modal isOpened={isOpened} onBackdropClick={handleToggleModal} maxWidth={900}>
         <CreateUser />
       </Modal>
     </div>
