@@ -14,3 +14,8 @@ export { ReactComponent as Plus } from "./plus.svg";
 export { ReactComponent as ButtonArrow } from "./button_arrow.svg";
 export { ReactComponent as Edit } from "./edit.svg";
 export { ReactComponent as Star } from "./star.svg";
+export { ReactComponent as UserAvatar } from "./user_avatar.svg";
+export { ReactComponent as ButtonCross } from "./button_cross.svg";
+export { ReactComponent as CashIcon } from "./cash_icon.svg";
+export { ReactComponent as CreditCardIcon } from "./credit_card_icon.svg";
+export { ReactComponent as PointsIcon } from "./points_icon.svg";

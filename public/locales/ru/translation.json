@@ -87,7 +87,15 @@
     "cancel": "Отменить",
     "delete": "Удалить",
     "note": "Заметка",
-    "title": "Заголовок"
+    "title": "Заголовок",
+
+    "in_cash_register": "В кассе",
+    "cash_withdrawal": "Изъятие из кассы",
+    "amount": "Введите сумму",
+    "comment": "Комментарий",
+    "withdraw": "Изъять",
+
+    "club_load": "Загрузка клуба"
   },
   "clients": {
     "buttons": {

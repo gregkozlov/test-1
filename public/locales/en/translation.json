@@ -86,7 +86,15 @@
     "cancel": "Cancel",
     "delete": "Delete",
     "note": "Note",
-    "title": "Title"
+    "title": "Title",
+
+    "in_cash_register": "In cash register",
+    "cash_withdrawal": "Cash withdrawal",
+    "amount": "Amount",
+    "comment": "Comment",
+    "withdraw": "Withdraw",
+
+    "club_load": "Club load"
   },
   "clients": {
     "buttons": {
