@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import styles from "./modal-content.module.scss";
 
 import { Props } from "./type";
 
-const ModalContent: React.FC<Props> = ({ setModalActive, setCashValue }) => {
+const RegisterModalContent: React.FC<Props> = ({ setModalActive, setCashValue }) => {
+  const { t } = useTranslation();
+
   const [inputCash, setInputCash] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -15,7 +18,7 @@ const ModalContent: React.FC<Props> = ({ setModalActive, setCashValue }) => {
 
   return (
     <div className={styles.content}>
-      <h3 className={styles.content__heading}>Изъятие из кассы</h3>
+      <h3 className={styles.content__heading}>{t("dashboard.cash_withdrawal")}</h3>
       <form className={styles.form}>
         <input
           className={styles.form__input}
@@ -24,15 +27,20 @@ const ModalContent: React.FC<Props> = ({ setModalActive, setCashValue }) => {
           }}
           value={inputCash}
           type="text"
-          placeholder="Введите сумму"
-          name="Input sum"
+          placeholder={t("dashboard.amount") || "Amount"}
+          name="Sum"
         />
-        <input className={styles.form__input} type="text" placeholder="Комментарий" name="Input comment" />
+        <input
+          className={styles.form__input}
+          type="text"
+          placeholder={t("dashboard.comment") || "Comment"}
+          name="Comment"
+        />
         <button className={styles.form__button} type="submit" onClick={handleSubmit}>
-          Изъять
+          {t("dashboard.withdraw")}
         </button>
       </form>
     </div>
   );
 };
-export default ModalContent;
+export default RegisterModalContent;

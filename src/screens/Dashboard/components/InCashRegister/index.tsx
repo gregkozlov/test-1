@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
-import Modal1 from "../../../../shared/components/Modal1";
+import { useTranslation } from "react-i18next";
+import Modal from "../../../../shared/components/Modal";
 import { ButtonArrow } from "../../../../shared/images";
 import styles from "./in-cash-register.module.scss";
-import ModalContent from "./ModalContent";
+import RegisterModalContent from "./ModalContent";
 
 const InCashRegister = () => {
+  const { t } = useTranslation();
+
   const [modalActive, setModalActive] = useState<boolean>(false);
 
   const cash = localStorage.getItem("cashValue");
@@ -16,16 +19,16 @@ const InCashRegister = () => {
 
   return (
     <div className={styles.in_cash_register}>
-      <h3 className={styles.in_cash_register__heading}>В кассе:</h3>
+      <h3 className={styles.in_cash_register__heading}>{t("dashboard.in_cash_register")}:</h3>
       <div className={styles.balance}>
         <p className={styles.balance__value}>{cashValue} &#8381;</p>
         <button className={styles.balance__btn} onClick={() => setModalActive(!modalActive)}>
           <ButtonArrow className={styles.balance__arrow} />
         </button>
       </div>
-      <Modal1 modalActive={modalActive} setModalActive={setModalActive}>
-        <ModalContent setModalActive={setModalActive} setCashValue={setCashValue} />
-      </Modal1>
+      <Modal isOpened={modalActive} onBackdropClick={() => setModalActive(false)}>
+        <RegisterModalContent setModalActive={setModalActive} setCashValue={setCashValue} />
+      </Modal>
     </div>
   );
 };

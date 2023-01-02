@@ -12,10 +12,16 @@ import Button from "../Button";
 import Text from "../Text";
 import { useTheme } from "../../hooks";
 import { t } from "i18next";
+import { useState } from "react";
+import Modal from "../Modal";
+import BalanceReplenishmentModal from "../BalanceReplenishmentModal/";
 
 const Header: React.FC = () => {
   const pageTitle = useSelector<RootState>((state) => state.rootReducer.layoutSliceReducer.title) as string;
   const theme = useTheme();
+
+  const [modalActive, setModalActive] = useState<boolean>(false);
+
   return (
     <div className={`${styles.header}  ${styles[theme]}`}>
       <Grid fullHeight>
@@ -36,7 +42,7 @@ const Header: React.FC = () => {
               <Col size={5} rightSpace={15}>
                 <div className={styles.header__dropdown_container}>
                   <div className={styles.plus_button_container}>
-                    <Button size="small">
+                    <Button size="small" onClick={() => setModalActive(true)}>
                       <Text size="large">+</Text>
                     </Button>
                   </div>
@@ -51,6 +57,9 @@ const Header: React.FC = () => {
             </Row>
           </Col>
         </Row>
+        <Modal isOpened={modalActive} onBackdropClick={() => setModalActive(false)}>
+          <BalanceReplenishmentModal setModalActive={setModalActive} />
+        </Modal>
       </Grid>
     </div>
   );
