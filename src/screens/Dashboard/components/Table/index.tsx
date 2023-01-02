@@ -497,7 +497,7 @@ const DashBoardTable = () => {
         </div>
       </Row>
       <Table
-        height={`calc(100vh - 430px)`}
+        height={`calc(100vh - 490px)`}
         table={table}
         rowStyles={{
           border: "1px solid $table-border",

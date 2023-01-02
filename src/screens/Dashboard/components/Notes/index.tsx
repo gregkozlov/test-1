@@ -128,7 +128,7 @@ const Notes = () => {
   }, []);
 
   return (
-    <div className={`${styles.notes} ${styles[theme]}`} style={{ height: `calc(100vh - 430px)` }}>
+    <div className={`${styles.notes} ${styles[theme]}`} style={{ height: `calc(100vh - 490px)` }}>
       <div className={styles.notes__header}>
         <Row>
           <Text bold size={"large"}>
