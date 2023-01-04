@@ -1,13 +1,16 @@
+import { useTranslation } from "react-i18next";
 import { ButtonCross } from "../../../../images";
 import styles from "./notes.module.scss";
 
 const Notes = () => {
+  const { t } = useTranslation();
+
   const items = [1, 2, 3];
 
   return (
     <div className={styles.notes}>
       <div className={styles.header}>
-        <h3 className={styles.header__text}>Заметки</h3>
+        <h3 className={styles.header__text}>{t("dashboard.balance_notes")}</h3>
         <button className={styles.header__button}>
           <ButtonCross />
         </button>
@@ -18,7 +21,7 @@ const Notes = () => {
             <p>
               <b>Admin T.</b> 12.12.2022
             </p>
-            <p>Угрожает админам</p>
+            <p>{t("dashboard.hello")}</p>
           </div>
         ))}
       </div>

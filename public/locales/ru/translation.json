@@ -95,7 +95,25 @@
     "comment": "Комментарий",
     "withdraw": "Изъять",
 
-    "club_load": "Загрузка клуба"
+    "club_load": "Загрузка клуба",
+
+    "balance_replenishment": "Пополнение баланса",
+    "banned": "Забанен",
+    "balance": "Баланс",
+    "age": "Возврат",
+    "years": "лет",
+    "registered": "Зарегистрирован",
+    "balance_notes": "Заметки",
+    "hello": "Говорит привет",
+    "user": "Пользователь",
+    "replenishment_sum": "Сумма пополнения",
+    "payment_method": "Способ оплаты",
+    "pay_cash": "Наличные",
+    "pay_card": "Картой",
+    "pay_points": "Баллы",
+    "to_be_paid": "К оплате",
+    "rub": "руб",
+    "pay": "Оплатить"
   },
   "clients": {
     "buttons": {

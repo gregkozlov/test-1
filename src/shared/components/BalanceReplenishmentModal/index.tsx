@@ -10,7 +10,7 @@ const BalanceReplenishment: React.FC<Props> = ({ setModalActive }) => {
 
   return (
     <div className={styles.replenish}>
-      <h3 className={styles.replenish__header}>Пополнение баланса</h3>
+      <h3 className={styles.replenish__header}>{t("dashboard.balance_replenishment")}</h3>
       <div className={styles.content}>
         <div className={styles.content__left}>
           <UserInfo />
