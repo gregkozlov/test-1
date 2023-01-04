@@ -94,7 +94,25 @@
     "comment": "Comment",
     "withdraw": "Withdraw",
 
-    "club_load": "Club load"
+    "club_load": "Club load",
+
+    "balance_replenishment": "Balance replenishment",
+    "banned": "Banned",
+    "balance": "Balance",
+    "age": "Age",
+    "years": "years",
+    "registered": "Registered",
+    "balance_notes": "Notes",
+    "hello": "Says hello",
+    "user": "User",
+    "replenishment_sum": "Replenishment sum",
+    "payment_method": "Payment method",
+    "pay_cash": "Cash",
+    "pay_card": "Card",
+    "pay_points": "Points",
+    "to_be_paid": "To be paid",
+    "rub": "rub",
+    "pay": "Pay"
   },
   "clients": {
     "buttons": {

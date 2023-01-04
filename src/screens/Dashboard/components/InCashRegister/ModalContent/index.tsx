@@ -27,13 +27,13 @@ const RegisterModalContent: React.FC<Props> = ({ setModalActive, setCashValue })
           }}
           value={inputCash}
           type="text"
-          placeholder={t("dashboard.amount") || "Amount"}
+          placeholder={t("dashboard.amount") as string}
           name="Sum"
         />
         <input
           className={styles.form__input}
           type="text"
-          placeholder={t("dashboard.comment") || "Comment"}
+          placeholder={t("dashboard.comment") as string}
           name="Comment"
         />
         <button className={styles.form__button} type="submit" onClick={handleSubmit}>
