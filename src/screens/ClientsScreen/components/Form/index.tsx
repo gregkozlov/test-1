@@ -2,13 +2,16 @@ import { Formik } from "formik";
 import { useTranslation } from "react-i18next";
 import { Button, Col, DashboardContainer, Grid, Input, Row } from "../../../../shared";
 import { UserAvatar } from "../../../../shared/images";
+import { useTheme } from "../../../../shared/hooks";
 import Select from "./Select";
 import styles from "./user_form.module.scss";
 
 const Form: React.FC = () => {
   const { t } = useTranslation();
+  const theme = useTheme();
   const roles = [t("clients.form.role.client"), t("clients.form.role.operator")];
   const gender = [t("clients.form.gender.male"), t("clients.form.gender.female")];
+
   const baseSpace = 20;
 
   return (
