@@ -21,12 +21,12 @@ const Select: React.FC<SelectProps> = ({
             {placeholder}
           </option>
           {options.map((el) => (
-            <option value={el} key={el}>
+            <option className={`${styles.field__option} ${styles[theme]}`} value={el} key={el}>
               {el}
             </option>
           ))}
         </select>
-        <ChevronDown className={styles.field__chevron} />
+        <ChevronDown className={`${styles.field__chevron} ${styles[theme]}`} />
       </div>
     </div>
   );

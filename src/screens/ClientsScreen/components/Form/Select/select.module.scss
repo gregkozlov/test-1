@@ -113,6 +113,10 @@
     position: absolute;
     top: 19px;
     right: 20px;
+
+    &.dark {
+      filter: invert(100%);
+    }
   }
 }
 .relative {
