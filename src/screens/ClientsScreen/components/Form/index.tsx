@@ -1,14 +1,17 @@
 import { Formik } from "formik";
 import { useTranslation } from "react-i18next";
 import { Button, Col, DashboardContainer, Grid, Input, Row } from "../../../../shared";
+import { useTheme } from "../../../../shared/hooks";
 import { Avatar } from "../../../../shared/images";
 import Select from "./Select";
 import styles from "./user_form.module.scss";
 
 const Form: React.FC = () => {
   const { t } = useTranslation();
+  const theme = useTheme();
   const roles = [t("clients.form.role.client"), t("clients.form.role.operator")];
   const gender = [t("clients.form.gender.male"), t("clients.form.gender.female")];
+
   const baseSpace = 20;
 
   return (
@@ -16,7 +19,7 @@ const Form: React.FC = () => {
       <Grid>
         <Row>
           <Col size={3}>
-            <Avatar className={styles.avatar} />
+            <Avatar className={`${styles.avatar} ${styles[theme]}`} />
             <Row>
               <Select options={gender} placeholder={t("clients.form.placeholders.gender") as string} />
             </Row>
