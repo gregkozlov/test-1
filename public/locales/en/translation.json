@@ -67,6 +67,19 @@
         "balance": "Balance",
         "discount": "Discount"
       }
+    },
+    "computerList": {
+      "header": {
+        "name": "Name",
+        "status": "Status",
+        "reserved": "Reserved",
+        "user": "User",
+        "tax": "Tax",
+        "start": "Started at",
+        "end": "Ended at",
+        "left": "Time left",
+        "app": "App"
+      }
     }
   },
   "dashboard": {

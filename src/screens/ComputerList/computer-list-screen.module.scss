@@ -1,0 +1,13 @@
+@import "/src/style/colors.scss";
+
+.computer_list {
+  margin: 20px 20px 45px 35px;
+  padding: 0px 20px 45px 20px;
+  background-color: map-get($background_colors_light_theme, "primary");
+  border-radius: 0 10px 10px 10px;
+}
+
+.container {
+  padding: 25px;
+  height: calc(100vh - 100px);
+}
