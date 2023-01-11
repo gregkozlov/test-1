@@ -1,7 +1,13 @@
+import { DashboardContainer } from "../../shared";
+import ComputerListTable from "./components/Table";
+import styles from "./computer-list-screen.module.scss";
+
 const ComputerListScreen: React.FC = () => {
   return (
-    <div>
-      <h1>ComputerListScreen</h1>
+    <div className={styles.container}>
+      <DashboardContainer>
+        <ComputerListTable />
+      </DashboardContainer>
     </div>
   );
 };
