@@ -1,0 +1,169 @@
+{
+  "login": {
+    "authorization": "Sign In"
+  },
+  "placeholders": {
+    "login": "Enter your Login",
+    "password": "Enter your Password",
+    "search": "Search"
+  },
+  "labels": {
+    "login": "Login",
+    "password": "Password"
+  },
+  "buttons": {
+    "login": "Login"
+  },
+  "formikErrors": {
+    "emptyLogin": "Login is required",
+    "shortLogin": "Login is too short ",
+    "longLogin": "Login is too long",
+    "emptyPassword": "Password is required",
+    "shortPassword": "Password is too short",
+    "longPassword": "Password is too long",
+    "invalidPhone": "Invalid phone number",
+    "invalidLogin": "Symbols are not allowed"
+  },
+  "navigation": {
+    "pages": {
+      "dashboard": "Dashboard",
+      "computers": "Computers",
+      "marketplace": "Marketplace",
+      "clients": "Clients",
+      "logs": "Error Logs",
+      "spaceMap": "Space Map",
+      "profile": "Profile",
+      "products": "Products",
+      "service": "Service",
+      "taxes": "Taxes",
+      "loyalty": "Loyalty System",
+      "employees": "Employees",
+      "content": "Content",
+      "reports": "Reports",
+      "settings": "Settings"
+    }
+  },
+  "tables": {
+    "dashboard": {
+      "time": "TIME",
+      "check": "CHECK NUMBER",
+      "user": "USER NAME",
+      "description": "DESCRIPTION",
+      "type": "TYPE",
+      "amount": "AMOUNT",
+      "statusPaid": "Paid",
+      "statusReturned": "Returned",
+      "replenishments": "Replenishments",
+      "cashPayment": "Cash"
+    },
+    "clients": {
+      "header": {
+        "login": "Login",
+        "name": "Name",
+        "phoneNumber": "Phone Number",
+        "email": "Email",
+        "registrationDate": "Registration Date",
+        "lastVisit": "Last Visit",
+        "balance": "Balance",
+        "discount": "Discount"
+      }
+    },
+    "computerList": {
+      "header": {
+        "name": "Name",
+        "status": "Status",
+        "reserved": "Reserved",
+        "user": "User",
+        "tax": "Tax",
+        "start": "Started at",
+        "end": "Ended at",
+        "left": "Time left",
+        "app": "App"
+      }
+    }
+  },
+  "dashboard": {
+    "x-report": "X-REPORT",
+    "z-report": "Z-REPORT",
+    "replenishments": "Replenishments",
+    "notes": "Notes",
+    "cashInHand": "Cash in hand:",
+    "atTheBeginningOfShift": "At the beginning of the shift:",
+    "revenue": "Revenue",
+    "staff": "Employee:",
+    "beginningOfShift": "Beginning of the shift:",
+    "shiftOpen": "Shift is open",
+    "cash": "Cash",
+    "card": "Card",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "note": "Note",
+    "title": "Title",
+
+    "in_cash_register": "In cash register",
+    "cash_withdrawal": "Cash withdrawal",
+    "amount": "Amount",
+    "comment": "Comment",
+    "withdraw": "Withdraw",
+
+    "club_load": "Club load",
+
+    "balance_replenishment": "Balance replenishment",
+    "banned": "Banned",
+    "balance": "Balance",
+    "age": "Age",
+    "years": "years",
+    "registered": "Registered",
+    "balance_notes": "Notes",
+    "hello": "Says hello",
+    "user": "User",
+    "replenishment_sum": "Replenishment sum",
+    "payment_method": "Payment method",
+    "pay_cash": "Cash",
+    "pay_card": "Card",
+    "pay_points": "Points",
+    "to_be_paid": "To be paid",
+    "rub": "rub",
+    "pay": "Pay"
+  },
+  "clients": {
+    "buttons": {
+      "createClient": "Create client",
+      "create": "Create",
+      "save": "Save"
+    },
+    "form": {
+      "labels": {
+        "login": "Login",
+        "password": "Password",
+        "name": "Name",
+        "surname": "Surname",
+        "phoneNumber": "Phone number",
+        "email": "Email",
+        "dateOfBirth": "Date of birth",
+        "role": "Role",
+        "gender": "Gender"
+      },
+      "placeholders": {
+        "login": "Enter user login",
+        "password": "Enter user password",
+        "name": "Enter user name",
+        "surname": "Enter user surname",
+        "phoneNumber": "Enter user phone number",
+        "email": "Enter user email",
+        "dateOfBirth": "Enter user date of birth",
+        "role": "Choose user role",
+        "gender": "Choose gender"
+      },
+      "gender": {
+        "male": "Male",
+        "female": "Female"
+      },
+      "role": {
+        "client": "Client",
+        "operator": "Operator"
+      }
+    }
+  }
+}
