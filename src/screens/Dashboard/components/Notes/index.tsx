@@ -11,7 +11,7 @@ const Notes = () => {
   const hardcodedNotes = [
     {
       id: 1,
-      username: "Admin T.",
+      username: "111.",
       date: "12.12.2022",
       note: "Угрожает админам",
       checked: false

@@ -39,7 +39,7 @@ const Dropdown: React.FC<DropdownType> = () => {
     <div className={`${styles.dropdown} ${styles[theme]}`} ref={modalRef}>
       <Button onClick={handleDropdown}>
         <div className={styles.button_inner_container}>
-          <Text>Admin T.</Text>
+          <Text>111.</Text>
           <ChevronDown />
         </div>
       </Button>

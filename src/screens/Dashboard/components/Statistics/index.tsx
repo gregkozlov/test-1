@@ -9,7 +9,7 @@ const Statistic = () => {
           <div className={styles.employee_label}>
             <Text color="#93939D">{t("dashboard.staff") as string}</Text>
             <Text bold size="large">
-              Admin T.
+              111.
             </Text>
           </div>
           <div className={styles.profit_label}>

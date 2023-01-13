@@ -19,7 +19,7 @@ const Notes = () => {
         {items.map((item) => (
           <div className={styles.content__item} key={item}>
             <p>
-              <b>Admin T.</b> 12.12.2022
+              <b>111.</b> 12.12.2022
             </p>
             <p>{t("dashboard.hello")}</p>
           </div>
