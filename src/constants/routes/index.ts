@@ -36,56 +36,56 @@ import { linkItemType } from "./types";
 
 export const LINKS_TOP: linkItemType[] = [
   {
-    url: "/",
+    url: "/test-1/",
     title: "navigation.pages.dashboard",
     component: DashboardScreen,
     icon: Dashboard
   },
   {
-    url: "/computers/spacemap",
+    url: "/test-1/computers/spacemap",
     title: "navigation.pages.computers",
     component: ComputersScreen,
     icon: Computer,
     dropdown: [
       {
         // naming!!
-        url: "/computers/spacemap",
+        url: "/test-1/spacemap",
         title: "navigation.pages.spaceMap",
         component: SpaceMapScreen
       },
       {
-        url: "/computers/computerlist",
+        url: "/test-1/computerlist",
         title: "navigation.pages.profile",
         component: ComputerListScreen
       }
     ]
   },
   {
-    url: "/marketplace/products",
+    url: "/test-1/products",
     title: "navigation.pages.marketplace",
     component: MarketplaceScreen,
     icon: Store,
     dropdown: [
       {
-        url: "/marketplace/products",
+        url: "/test-1/marketplace/products",
         title: "navigation.pages.products",
         component: ProductsScreen
       },
       {
-        url: "/marketplace/service",
+        url: "/test-1/marketplace/service",
         title: "navigation.pages.service",
         component: ServiceScreen
       }
     ]
   },
   {
-    url: "/clients",
+    url: "/test-1/clients",
     title: "navigation.pages.clients",
     icon: Clients,
     component: ClientsScreen
   },
   {
-    url: "/errorlog",
+    url: "/test-1/errorlog",
     title: "navigation.pages.logs",
     component: ErrorLogs,
     icon: Logs
@@ -94,37 +94,37 @@ export const LINKS_TOP: linkItemType[] = [
 
 export const LINKS_BOTTOM: linkItemType[] = [
   {
-    url: "/taxes",
+    url: "/test-1/taxes",
     title: "navigation.pages.taxes",
     icon: Percent,
     component: TaxesScreen
   },
   {
-    url: "/loyalty",
+    url: "/test-1/loyalty",
     title: "navigation.pages.loyalty",
     icon: Loyalty,
     component: LoyaltyScreen
   },
   {
-    url: "/employees",
+    url: "/test-1/employees",
     title: "navigation.pages.employees",
     icon: People,
     component: EmployeesScreen
   },
   {
-    url: "/content",
+    url: "/test-1/content",
     title: "navigation.pages.content",
     icon: Book,
     component: ContentScreen
   },
   {
-    url: "/reports",
+    url: "/test-1/reports",
     title: "navigation.pages.reports",
     icon: Cloud,
     component: ReportsScreen
   },
   {
-    url: "/settings",
+    url: "/test-1/settings",
     title: "navigation.pages.settings",
     icon: Settings,
     component: SettingsScreen
