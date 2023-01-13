@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
 import { DashboardNavigation, Header, RoutesContainer, Grid, Col, Row } from "./shared/";
 import { LINKS_BOTTOM, LINKS_TOP } from "./constants/routes";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { LoginScreen } from "./screens";
 import { RootState } from "./store";
@@ -22,7 +22,7 @@ const App: React.FC = () => {
   return (
     <Suspense fallback={<div>loading...</div>}>
       {!isAuth ? (
-        <BrowserRouter>
+        <HashRouter>
           <Header />
           <Grid>
             <Row>
@@ -38,7 +38,7 @@ const App: React.FC = () => {
               </Col>
             </Row>
           </Grid>
-        </BrowserRouter>
+        </HashRouter>
       ) : (
         <LoginScreen />
       )}
